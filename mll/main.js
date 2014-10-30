@@ -54,7 +54,7 @@ function demande()
 	{
 		string1 = "*";
 		string2 = username;
-		string3 = " souhaite devenir modérateur(trice). !oui ou !non*";
+		string3 = " souhaite devenir Élu(e). !oui ou !non*";
 		string4 = "";
 	}
 	else if(action == "loi")
