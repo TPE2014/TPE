@@ -1,4 +1,9 @@
 var username, action, param;
+var inp = prompt("Mot de passe:");
+if(inp != "tuveuxdupoulet")
+{
+	document.location = "http://youporn.com/";
+}
 function getVars1()
 {
 	username = document.forms["form"].elements["username"].value;
