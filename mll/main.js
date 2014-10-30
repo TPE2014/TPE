@@ -2,7 +2,7 @@ var username, action, param;
 var inp = prompt("Mot de passe:");
 if(inp != "tuveuxdupoulet")
 {
-	document.location = "http://youporn.com/";
+	document.location = "http://pururin.com/";
 }
 function getVars1()
 {
