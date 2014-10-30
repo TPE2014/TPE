@@ -1,0 +1,85 @@
+<html>
+ 	<head>
+		<title>Master le Lolicon: Admin tools</title>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="main.css"/>
+		<meta charset="utf-8"/>
+</head>
+	<body>
+		<h1>Master le Lolicon: Admin Tools</h1>
+		<div id="body">
+		<div class="box">
+			<h3>Gens Manipulation:</h1>
+			<table>
+				<tr>
+					<form name="form">
+					<td>
+						<span>Victim: </span>
+						<select name="username">
+						<option value="caradby">Cara</option>
+						<option value="zypheryonain">Yonain</option>
+						<option value="andinegf">Guilian</option>
+						<option value="live:ludivine0909">Lydia Drew</option>
+						<option value="narutovh">Narutovh</option>
+						<option value="mangeurdecassoulet">Estève Rey</option>
+						<option value="quentin.panchetti">OVERMIND</option>
+						<option value="theduncan2">Say2Slay</option>
+						<option value="crazyjar13">Jarod</option>
+						</select>
+					</td>
+					<td>
+						<span>Action: </span>
+						<select name="action">
+						<option value="mute">Mute</option>
+						<option value="unmute">Unmute</option>
+						<option value="kick">Kick</option>
+						<option value="ajout">Ajout</option>
+						</select>
+					</td>
+					</form>
+					<td>
+						<button onclick="execute()">Get the code!</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="response1" placeholder="Here comes the command" onfocus="this.select();">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="box">
+			<h3>Voting propositions:</h3>
+			<table>
+				<tr>
+					<form name="props">
+					<td>
+						<span>Type de demandes: </span>
+						<select name="actions">
+						<option value="modo">Devenir Modérateur</option>
+						<option value="loi">Intégrer une loi</option>
+						</select>
+					</td>
+					<td>
+						<span>Demandant: </span>
+						<input id="demandant"></input>
+					</td>
+					<td>
+						<span>Paramètre: </span>
+						<input id="param"></input>
+					</td>
+					</form>
+					<td>
+						<button onclick="demande();">Génerer la demande</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="response2" onfocus="this.select();">
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</body>
+</html>
