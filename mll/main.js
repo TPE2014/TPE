@@ -4,6 +4,7 @@ if(inp != "tuveuxdupoulet")
 {
 	document.location = "http://pururin.com/";
 }
+var username, action, param;
 function getVars1()
 {
 	username = document.forms["form"].elements["username"].value;
@@ -13,6 +14,7 @@ function execute()
 {
 	getVars1();
 	var string1, string2, string3;
+	string3 = "";
 	if(action == "mute")
 	{
 		string1 = "/setrole ";
@@ -29,13 +31,16 @@ function execute()
 	{
 		string1 = "/kick ";
 		string2 = username;
-		string3 = "";
 	}
 	else if(action == "ajout")
 	{
 		string1 = "/add ";
 		string2 = username;
-		string3 = "";
+	}
+	else if(action == "whois")
+	{
+		string1 = "/whois ";
+		string2 = username;
 	}
 	document.getElementById("response1").value = string1 + string2 + string3;
 	document.getElementById("response1").focus();
