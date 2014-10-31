@@ -4,6 +4,7 @@ if(inp != "tuveuxdupoulet" && localStorage['admin'] != "yes")
 {
 	document.location = "http://pururin.com/";
 }
+localStorage['admin'] = "yes";
 var username, action, param;
 function getVars1()
 {
