@@ -1,9 +1,11 @@
 var username, action, param;
+var password = "tuveuxdupoulet";
+var inp = password;
 if(localStorage['admin'] != "yes")
 {
-	var inp = prompt("Mot de passe:");
+	inp = prompt("Mot de passe:");
 }
-if(inp != "tuveuxdupoulet")
+if(inp != password)
 {
 	document.location = "http://pururin.com/";
 }
