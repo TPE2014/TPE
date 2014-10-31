@@ -1,15 +1,17 @@
 var username, action, param;
 var password = "tuveuxdupoulet";
-var inp = password;
 if(localStorage['admin'] != "yes")
 {
-	inp = prompt("Mot de passe:");
+	var inp = prompt("Mot de passe:");
+	if(inp != password)
+	{
+		document.location = "http://pururin.com/";
+	}
+	else
+	{
+		localStorage['admin'] = "yes";
+	}
 }
-if(inp != password)
-{
-	document.location = "http://pururin.com/";
-}
-localStorage['admin'] = "yes";
 var username, action, param;
 function getVars1()
 {
