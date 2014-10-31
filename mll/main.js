@@ -1,6 +1,6 @@
 var username, action, param;
 var inp = prompt("Mot de passe:");
-if(inp != "tuveuxdupoulet")
+if(inp != "tuveuxdupoulet" && localStorage['admin'] != "yes")
 {
 	document.location = "http://pururin.com/";
 }
