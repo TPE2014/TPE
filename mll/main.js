@@ -42,6 +42,11 @@ function execute()
 		string1 = "/whois ";
 		string2 = username;
 	}
+	else if(action == "liste")
+	{
+		string1 = "/showmembers";
+		string2 = "";
+	}
 	document.getElementById("response1").value = string1 + string2 + string3;
 	document.getElementById("response1").focus();
 }
