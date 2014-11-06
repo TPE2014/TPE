@@ -49,9 +49,9 @@ function chooseShot()//Here comes the AI
 	if(index == 0) // Premier coup
 	{
 	console.log("1");
+	index = 1;
 		if(sexe == 1)
 		{
-			index = 1;
 			return response(1);
 		}
 		else if(sexe == 42)
@@ -60,11 +60,10 @@ function chooseShot()//Here comes the AI
 		}
 		else
 		{
-			index = 1;
 			return response(3);
 		}
 	}
-	else if((lastVar(prev) == lastVar2(prev)) && isDefined(lastVar2(prev))/* && bourinEngaged != 2*/)
+	else if((lastVar(prev) == lastVar2(prev))/* && isDefined(lastVar2(prev)) && bourinEngaged != 2*/)
 	{
 	console.log("2");
 		bourinEngaged++;
