@@ -66,6 +66,7 @@ function chooseShot()//Here comes the AI
 	else if(lastVar(prev) == lastVar2(prev)/* && isDefined(lastVar2(prev)) && bourinEngaged != 2*/)
 	{
 	console.log("2");
+	alert("LOL");
 		bourinEngaged++;
 		var tmp = rdm(1, 3);
 		if(tmp == 1)
