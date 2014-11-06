@@ -3,6 +3,7 @@ var index = 0;
 var victoires = 0;
 var defaites = 0;
 var mnuls = 0;
+var bourinEngaged = 0;
 var sexe;
 // Coups:
 // 1: Pierre
@@ -12,14 +13,42 @@ function init()
 {
 	sexe = prompt("Êtes vous un homme? (1/0)");
 }
+function lastVar(arr)
+{
+	return arr[arr.length-1];
+}
+function lastVar2(arr)
+{
+	return arr[arr.length-2];
+}
+function lastVar3(arr)
+{
+	return arr[arr.length-3];
+}
+function lastVar4(arr)
+{
+	return arr[arr.length-4];
+}
 function rdm(min, max)
 {
 	return Math.floor((Math.random() * max) + min);
 }
+function isDefined(va)
+{
+	return typeof va != "undefined";
+}
+function iaShot()
+{
+	play(chooseShot());
+}
 function chooseShot()//Here comes the AI
 {
+	var baseTest = isDefined(lastVar(prev)) && isDefined(lastVar(prev)) && isDefined(lastVar(prev));
+	var testAllerRetour1 = ((lastVar(prev) != lastVar2(prev)) && (lastVar2(prev) != lastVar3(prev))) && (lastVar3(prev) != lastVar(prev));
+	var testAllerRetour2 = (((lastVar2(prev) != lastVar3(prev)) && (lastVar3(prev) != lastVar4(prev))) && (lastVar4(prev) != lastVar2(prev))) && (lastVar(prev) == lastVar3(prev) || lastVar2(prev) == lastVar4(prev));
 	if(index == 0) // Premier coup
 	{
+	console.log("1");
 		if(sexe == 1)
 		{
 			index = 1;
@@ -35,10 +64,32 @@ function chooseShot()//Here comes the AI
 			return response(3);
 		}
 	}
-	else
+	else if((lastVar(prev) == lastVar2(prev)) && isDefined(lastVar2(prev)) && bourinEngaged != 2)
 	{
-		return rdmShot();
+	console.log("2");
+		bourinEngaged++;
+		if(rdm(1, 2) == 1)
+		{
+			return rdmShot();
+		}
+		else
+		{
+			return response(lastVar(prev));
+		}
 	}
+	else if(!testAllerRetour2 && isDefined(lastVar3(prev)))
+	{
+	console.log("3");
+		return response(lastVar3(prev));
+	}
+	else if(testAllerRetour2)
+	{
+	console.log("4");
+		return response(lastVar4(prev));
+	}
+	console.log("lol");
+	bourinEngaged = 0;
+	return rdmShot();
 }
 function response(nmb)
 {
@@ -124,6 +175,7 @@ function play(choix)
 {
 	var ret;
 	var aiShot = chooseShot();
+	prev.push(choix);
 	if(choix == aiShot)//Si l'IA et le joueur ont choisi le même signe
 	{
 		ret = "Match nul! Vous avez tous les deux choisi " + transform(choix) + "!";
@@ -166,5 +218,22 @@ function play(choix)
 		}
 	}
 	display(ret);
+	aiShot = null;
+	ret = null;
 }
 init();
+function playFor(choix, nb, subdivide)
+{
+	for(var i=0; i <subdivide; i++)
+	{
+		subLoop(choix, nb/subdivide);
+		alert(i + "/" + subdivide);
+	}
+}
+function subLoop(choix, nb)
+{
+	for(var i=0; i <nb; i++)
+	{
+		play(choix);
+	}
+}
