@@ -54,7 +54,7 @@ function chooseShot()//Here comes the AI
 			index = 1;
 			return response(1);
 		}
-		else if(sexe == 2)
+		else if(sexe == 42)
 		{
 			alert("10.255.4.141");
 		}
