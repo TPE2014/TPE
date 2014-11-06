@@ -1,3 +1,4 @@
+//Code JS for Chifumi by lacaulac
 var prev = []; //Ancien jets
 var index = 0;
 var victoires = 0;
@@ -28,6 +29,26 @@ function lastVar3(arr)
 function lastVar4(arr)
 {
 	return arr[arr.length-4];
+}
+function lastVar5(arr)
+{
+	return arr[arr.length-5];
+}
+function lastVar6(arr)
+{
+	return arr[arr.length-6];
+}
+function lastVar7(arr)
+{
+	return arr[arr.length-7];
+}
+function lastVar8(arr)
+{
+	return arr[arr.length-8];
+}
+function lastVar9(arr)
+{
+	return arr[arr.length-9];
 }
 function rdm(min, max)
 {
@@ -63,19 +84,15 @@ function chooseShot()//Here comes the AI
 			return response(3);
 		}
 	}
-	else if(lastVar(prev) == lastVar2(prev)/* && isDefined(lastVar2(prev)) && bourinEngaged != 2*/)//ici
+	else if(lastVar(prev) == lastVar2(prev)/* && isDefined(lastVar2(prev)) && bourinEngaged != 2*/)
 	{
 	console.log("2");
-	alert("LOL");
+	//alert("LOL");
 		bourinEngaged++;
-		var tmp = rdm(1, 3);
+		var tmp = rdm(1, 2);
 		if(tmp == 1)
 		{
 			return rdmShot();
-		}
-		else if(tmp == 2)
-		{
-			return response(rdmShot());
 		}
 		else
 		{
