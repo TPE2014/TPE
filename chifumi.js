@@ -84,10 +84,9 @@ function chooseShot()//Here comes the AI
 			return response(3);
 		}
 	}
-	else if(lastVar(prev) == lastVar2(prev)/* && isDefined(lastVar2(prev)) && bourinEngaged != 2*/)
+	else if(lastVar(prev) == lastVar2(prev) && isDefined(lastVar2(prev)))
 	{
 	console.log("2");
-	//alert("LOL");
 		bourinEngaged++;
 		var tmp = rdm(1, 2);
 		if(tmp == 1)
