@@ -1,4 +1,4 @@
-//Code JS for Chifumi by lacaulac
+//JS Code Chifumi by lacaulac
 var prev = []; //Ancien jets
 var index = 0;
 var victoires = 0;
