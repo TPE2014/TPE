@@ -68,9 +68,14 @@ function chooseShot()//Here comes the AI
 	{
 	console.log("2");
 		bourinEngaged++;
-		if(rdm(1, 4) == 1)
+		var tmp = rdm(1, 3);
+		if(tmp == 1)
 		{
 			return rdmShot();
+		}
+		else if(tmp == 2)
+		{
+			return response(rdmShot());
 		}
 		else
 		{
