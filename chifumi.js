@@ -50,6 +50,10 @@ function lastVar9(arr)
 {
 	return arr[arr.length-9];
 }
+function getlast(var1, var2)
+{
+	return 0;
+}
 function rdm(min, max)
 {
 	return Math.floor((Math.random() * max) + min);
@@ -93,10 +97,18 @@ function chooseShot()//Here comes the AI
 			return response(3);
 		}
 	}
-	else if(testAllerRetour3 && isDefined(lastVar4(prev)))
+	else if(testAllerRetour3 && isDefined(lastVar4(prev)) || bourinEngaged2 == 30)
 	{
 	console.log("5");
 		return 420;
+		if(bourinEngaged2 == 30)
+		{
+			bourinEngaged2 = 0;
+		}
+		else
+		{
+			bourinEngaged2 = 30;
+		}
 	}
 	else if(lastVar(prev) == lastVar2(prev) && isDefined(lastVar2(prev)))
 	{
