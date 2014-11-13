@@ -75,7 +75,7 @@ function chooseShot()//Here comes the AI
 	var baseTest = isDefined(lastVar(prev)) && isDefined(lastVar(prev)) && isDefined(lastVar(prev));
 	var testAllerRetour1 = ((lastVar(prev) != lastVar2(prev)) && (lastVar2(prev) != lastVar3(prev))) && (lastVar3(prev) != lastVar(prev));
 	var testAllerRetour2 = (((lastVar2(prev) != lastVar3(prev)) && (lastVar3(prev) != lastVar4(prev))) && (lastVar4(prev) != lastVar2(prev))) && (lastVar(prev) == lastVar3(prev) || lastVar2(prev) == lastVar4(prev));
-	var testAllerRetour3 = (((lastVar7(prev) == lastVar6(prev)) != (lastVar5(prev) == lastVar4(prev))) && ((lastVar5(prev) == lastVar4(prev)) != (lastVar3(prev) == lastVar2(prev))) && ((lastVar7(prev) == lastVar6(prev)) != (lastVar3(prev) == lastVar2(prev))));
+	var testAllerRetour3 = (lastVar7(prev) == lastVar6(prev) && lastVar5(prev) == lastVar4(prev) && lastVar3(prev) == lastVar2(prev) && (lastVar6(prev) != lastVar5(prev) != lastVar3(prev)));
 	if(index == 0) // Premier coup
 	{
 	console.log("1");
