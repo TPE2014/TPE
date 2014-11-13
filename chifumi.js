@@ -93,6 +93,11 @@ function chooseShot()//Here comes the AI
 			return response(3);
 		}
 	}
+	else if(testAllerRetour3)
+	{
+	console.log("5");
+		return response(lastVar6(prev));
+	}
 	else if(lastVar(prev) == lastVar2(prev) && isDefined(lastVar2(prev)))
 	{
 	console.log("2");
@@ -124,11 +129,6 @@ function chooseShot()//Here comes the AI
 	{
 	console.log("4");
 		return response(lastVar4(prev));
-	}
-	else if(testAllerRetour3)
-	{
-	console.log("5");
-		return response(lastVar6(prev));
 	}
 	console.log("lol");
 	bourinEngaged = 0;
