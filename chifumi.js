@@ -93,7 +93,7 @@ function chooseShot()//Here comes the AI
 			return response(3);
 		}
 	}
-	else if(testAllerRetour3)
+	else if(testAllerRetour3 && isDefined(lastVar7(prev)))
 	{
 	console.log("5");
 		return response(lastVar6(prev));
