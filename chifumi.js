@@ -54,9 +54,17 @@ function rdm(min, max)
 {
 	return Math.floor((Math.random() * max) + min);
 }
-function isDefined(va)
+function isDefined(val)
 {
-	return typeof va != "undefined";
+	var typeofval = typeof val;
+	if(typeofval != "undefined")
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 function iaShot()
 {
@@ -88,10 +96,18 @@ function chooseShot()//Here comes the AI
 	{
 	console.log("2");
 		bourinEngaged++;
-		var tmp = rdm(1, 2);
+		var tmp = rdm(1, 4);
 		if(tmp == 1)
 		{
 			return rdmShot();
+		}
+		else if(tmp == 2 && isDefined(lastVar3(prev)))
+		{
+			return response(lastVar3(prev));
+		}
+		else if(tmp == 3 && isDefined(lastVar4(prev)))
+		{
+			return response(lastVar4(prev));
 		}
 		else
 		{
