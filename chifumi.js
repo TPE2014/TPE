@@ -129,7 +129,7 @@ function chooseShot()//Here comes the AI
 	{
 	console.log("5");
 		return response(lastVar6(prev));
-	
+	}
 	console.log("lol");
 	bourinEngaged = 0;
 	return rdmShot();
