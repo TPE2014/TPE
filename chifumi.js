@@ -5,6 +5,7 @@ var victoires = 0;
 var defaites = 0;
 var mnuls = 0;
 var bourinEngaged = 0;
+var bourinEngaged2 = 0;
 var sexe;
 // Coups:
 // 1: Pierre
@@ -50,9 +51,55 @@ function lastVar9(arr)
 {
 	return arr[arr.length-9];
 }
-function getlast(var1, var2)
+function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 {
-	return 0;
+	if(var1 == var2)
+	{
+		return 685;
+	}
+	else if(var1 < 1 || var1 > 3)
+	{
+		return 684;
+	}
+	else if(var2 < 1 || var2 >3)
+	{
+		return 683;
+	}
+
+	if(var1 == 1 || var2 == 1)
+	{
+		if(var2 == 2 || var1 == 2)
+		{
+			return 3;
+		}
+		else
+		{
+			return 2;
+		}
+	}
+	else if(var1 == 2 || var2 == 2)
+	{
+		if(var2 == 1 || var1 == 1)
+		{
+			return 3;
+		}
+		else
+		{
+			return 1;
+		}
+	}
+	else
+	{
+		if(var2 == 2 || var1 == 2)
+		{
+			return 1;
+		}
+		else
+		{
+			return 2;
+		}
+	}
+	return 682;
 }
 function rdm(min, max)
 {
@@ -81,6 +128,7 @@ function chooseShot()//Here comes the AI
 	var testAllerRetour2 = (((lastVar2(prev) != lastVar3(prev)) && (lastVar3(prev) != lastVar4(prev))) && (lastVar4(prev) != lastVar2(prev))) && (lastVar(prev) == lastVar3(prev) || lastVar2(prev) == lastVar4(prev));
 	var testAllerRetour3 = (lastVar4(prev) == lastVar3(prev) && lastVar2(prev) == lastVar(prev) && lastVar3(prev) != lastVar2(prev));
 	var testAllerRetour4 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) == lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
+	var testAllerRetour5 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) != lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
 	if(index == 0) // Premier coup
 	{
 	console.log("1");
@@ -108,15 +156,20 @@ function chooseShot()//Here comes the AI
 		{
 			bourinEngaged2 = 30;
 		}
-		if (testAllerRetour4 && isDefined(lastVar6(prev)))
+		if (testAllerRetour4 && isDefined(lastVar6(prev)))// 33 22 33 => 2
 		{
 		console.log("6");
-			return reponse(lastVar3(prev));
+			return response(lastVar3(prev));
 		}
-		else
+		else if(testAllerRetour5 || isDefined(lastVar6(prev)))
+		{
+		console.log("7")
+			return response(lastVar6(prev));
+		}
+		else // 33 22 => 1
 		{
 		console.log("5");
-			//Code...
+			return response(getLast(lastVar(prev), lastVar3(prev)));
 		}
 		return 420;
 	}
