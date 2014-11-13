@@ -200,7 +200,7 @@ function chooseShot()//Here comes the AI
 	console.log("3");
 		return response(lastVar3(prev));
 	}
-	else if(testAllerRetour2)
+	else if(testAllerRetour2 && isDefined(lastVar4(prev)))
 	{
 	console.log("4");
 		return response(lastVar4(prev));
