@@ -80,6 +80,7 @@ function chooseShot()//Here comes the AI
 	var testAllerRetour1 = ((lastVar(prev) != lastVar2(prev)) && (lastVar2(prev) != lastVar3(prev))) && (lastVar3(prev) != lastVar(prev));
 	var testAllerRetour2 = (((lastVar2(prev) != lastVar3(prev)) && (lastVar3(prev) != lastVar4(prev))) && (lastVar4(prev) != lastVar2(prev))) && (lastVar(prev) == lastVar3(prev) || lastVar2(prev) == lastVar4(prev));
 	var testAllerRetour3 = (lastVar4(prev) == lastVar3(prev) && lastVar2(prev) == lastVar(prev) && lastVar3(prev) != lastVar2(prev));
+	var testAllerRetour4 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) == lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
 	if(index == 0) // Premier coup
 	{
 	console.log("1");
@@ -99,8 +100,6 @@ function chooseShot()//Here comes the AI
 	}
 	else if(testAllerRetour3 && isDefined(lastVar4(prev)) || bourinEngaged2 == 30)
 	{
-	console.log("5");
-		return 420;
 		if(bourinEngaged2 == 30)
 		{
 			bourinEngaged2 = 0;
@@ -109,6 +108,17 @@ function chooseShot()//Here comes the AI
 		{
 			bourinEngaged2 = 30;
 		}
+		if (testAllerRetour4 && isDefined(lastVar6(prev)))
+		{
+		console.log("6");
+			return reponse(lastVar3(prev));
+		}
+		else
+		{
+		console.log("5");
+			//Code...
+		}
+		return 420;
 	}
 	else if(lastVar(prev) == lastVar2(prev) && isDefined(lastVar2(prev)))
 	{
