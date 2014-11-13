@@ -11,6 +11,12 @@ var sexe;
 // 1: Pierre
 // 2: Feuille
 // 3: Ciseaux
+function error(numError)
+{
+	var textError = numError + ".";
+	alert("ERROR : " + textError);
+	return null;
+}
 function init()
 {
 	sexe = prompt("Êtes vous un homme? (1/0)");
@@ -55,15 +61,15 @@ function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 {
 	if(var1 == var2)
 	{
-		return 685;
+		return error(685);
 	}
 	else if(var1 < 1 || var1 > 3)
 	{
-		return 684;
+		return error(684);
 	}
 	else if(var2 < 1 || var2 >3)
 	{
-		return 683;
+		return error(683);
 	}
 
 	if(var1 == 1 || var2 == 1)
@@ -99,7 +105,7 @@ function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 			return 2;
 		}
 	}
-	return 682;
+	return error(682);
 }
 function rdm(min, max)
 {
@@ -140,6 +146,7 @@ function chooseShot()//Here comes the AI
 		else if(sexe == 42)
 		{
 			alert("10.255.4.141");
+			return error(16);
 		}
 		else
 		{
@@ -171,7 +178,7 @@ function chooseShot()//Here comes the AI
 		console.log("5");
 			return response(getLast(lastVar(prev), lastVar3(prev)));
 		}
-		return 420;
+		return error(420);
 	}
 	else if(lastVar(prev) == lastVar2(prev) && isDefined(lastVar2(prev)))
 	{
