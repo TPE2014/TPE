@@ -1,9 +1,9 @@
 var jsonData = 
 {
-  "list": {
-    1:"chi",
-    2:"fu",
-    3:"mi"
-  },
+  "list": [
+    "chi",
+    "fu",
+    "mi"
+  ],
   "urlNotif":"myurl.notif"
 }
