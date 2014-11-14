@@ -1,1 +1,8 @@
-//
+{
+  "list": {
+    1:"chi",
+    2:"fu",
+    3:"mi"
+  },
+  "urlNotif":"myurl.notif"
+}
