@@ -10,7 +10,9 @@ function getErrorText(int)
 }
 function getUser()
 {
-  return "Guest";
+  var usr = document.getElementByTagName("usr");
+  uusr = usr.innerHTML;
+  return uusr;
 }
 function printerror(text, int, user)
 {
