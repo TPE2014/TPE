@@ -1,4 +1,5 @@
 //js code by JesFot
+var javascript_ErrorCode_Chifumi_Version = "2.1";
 function getJson()
 {
   return jsonData;
