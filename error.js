@@ -1,7 +1,7 @@
 //js code by JesFot
 function getJson(url)
 {
-  return "{'list':['chi','fu','mi']}";
+  return {"list":["chi","fu","mi"]};
 }
 function getErrorText(url, int)
 {
