@@ -134,7 +134,7 @@ function chooseShot()//Here comes the AI
 	var testAllerRetour2 = (((lastVar2(prev) != lastVar3(prev)) && (lastVar3(prev) != lastVar4(prev))) && (lastVar4(prev) != lastVar2(prev))) && (lastVar(prev) == lastVar3(prev) || lastVar2(prev) == lastVar4(prev));
 	var testAllerRetour3 = (lastVar4(prev) == lastVar3(prev) && lastVar2(prev) == lastVar(prev) && lastVar3(prev) != lastVar2(prev));
 	var testAllerRetour4 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) == lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
-	var testAllerRetour5 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) != lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
+	//var testAllerRetour5 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) != lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
 	if(index == 0) // Premier coup
 	{
 	console.log("1");
@@ -168,11 +168,11 @@ function chooseShot()//Here comes the AI
 		console.log("6");
 			return response(lastVar3(prev));
 		}
-		else if(testAllerRetour5 || isDefined(lastVar6(prev)))
+		/*else if(testAllerRetour5 || isDefined(lastVar6(prev)))
 		{
 		console.log("7")
 			return response(lastVar6(prev));
-		}
+		}*/
 		else // 33 22 => 1
 		{
 		console.log("5");
