@@ -1,4 +1,5 @@
 //JS Code Chifumi by lacaulac
+var javascrpit_Chifumi_Version = "2.4.2";
 var prev = []; //Ancien jets
 var index = 0;
 var victoires = 0;
