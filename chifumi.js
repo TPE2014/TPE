@@ -11,10 +11,9 @@ var sexe;
 // 1: Pierre
 // 2: Feuille
 // 3: Ciseaux
-testerror(42);
 function error(int)
 {
-	//code ...
+	testerror(int);
 }
 function init()
 {
