@@ -37,3 +37,12 @@ function error(int)
 {
   printerror(getErrorText(int), int, getUser());
 }
+
+function getVersion_ErrorCode_Chifumi()
+{
+  return javascrpit_ErrorCode_Chifumi_Version;
+}
+function getVersion_ErrorJSONCode_Chifumi()
+{
+  return getJson().javascript_Object_Notation_ErrorCode_Chifumi_Version;
+}
