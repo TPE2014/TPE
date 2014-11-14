@@ -11,11 +11,10 @@ var sexe;
 // 1: Pierre
 // 2: Feuille
 // 3: Ciseaux
-function error(numError)
+testerror(42);
+function error(int)
 {
-	var textError = numError + ".";
-	alert("ERROR : " + textError);
-	return null;
+	//code ...
 }
 function init()
 {
