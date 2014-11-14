@@ -3,9 +3,9 @@ function getJson()
 {
   return jsonData;
 }
-function getErrorText(url, int)
+function getErrorText(int)
 {
-  var textJSON = getJson(url);//get JSON;
+  var textJSON = getJson();
   return textJSON.list[int];
 }
 function getUser()
@@ -34,5 +34,5 @@ function testerror(int)
 }
 function error(int)
 {
-  printerror(getErrorText(url, int), int, getUser());
+  printerror(getErrorText(int), int, getUser());
 }
