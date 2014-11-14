@@ -40,7 +40,7 @@ function error(int)
 
 function getVersion_ErrorCode_Chifumi()
 {
-  return javascrpit_ErrorCode_Chifumi_Version;
+  return javascript_ErrorCode_Chifumi_Version;
 }
 function getVersion_ErrorJSONCode_Chifumi()
 {
