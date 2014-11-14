@@ -11,10 +11,6 @@ var sexe;
 // 1: Pierre
 // 2: Feuille
 // 3: Ciseaux
-function error(int)
-{
-	testerror(int);
-}
 function init()
 {
 	sexe = prompt("Êtes vous un homme? (1/0)");
