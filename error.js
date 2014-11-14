@@ -10,7 +10,7 @@ function getErrorText(int)
 }
 function getUser()
 {
-  var usr = document.getElementByTagName("usr");
+  var usr = document.getElementsByTagName("usr");
   uusr = usr.innerHTML;
   return uusr;
 }
