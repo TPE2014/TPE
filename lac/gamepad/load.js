@@ -4,5 +4,5 @@ var pass = document.getElementById('passw').value;
 
 verifpass()
 {
-  var pssw = document.getElementById('').value;
+  var pssw = document.getElementById('passt').value;
 }
