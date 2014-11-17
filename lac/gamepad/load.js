@@ -4,5 +4,12 @@ var toBody = '<canvas id="canv" width="768" height="768">It seems that your brow
 function verifpass()
 {
   var pssw = document.getElementById('passt').value;
-  self.location.href = pssw + ".se";
+  if(self.location.href = pssw + ".se")
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
 }
