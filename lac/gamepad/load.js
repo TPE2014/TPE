@@ -3,9 +3,14 @@ var toBody = '<canvas id="canv" width="768" height="768">It seems that your brow
 
 var passw = document.getElementById('password').value;
 document.getElementById('password').value = "BAKA !";
-
-function log(pass)
+if (passw != x)
 {
+  passw = x;
+}
+
+function log()
+{
+  var pass = document.getElementById('passt').value;
   if (pass == passw)
   {
     return true;
