@@ -6,3 +6,4 @@ verifpass()
 {
   var pssw = document.getElementById('passt').value;
 }
+document.getElementById('scriptthing').src = "secure.pass";
