@@ -13,3 +13,6 @@ function verifpass()
     return false;
   }
 }
+
+var pass = document.getElementById('password').value;
+document.getElementById('password').value = "BAKA !";
