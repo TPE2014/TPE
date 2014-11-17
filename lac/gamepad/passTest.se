@@ -1,7 +1,0 @@
-//secure code
-var pass = "";
-
-
-function getCode() {
-  return pass;
-}
