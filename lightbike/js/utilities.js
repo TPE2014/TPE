@@ -11,3 +11,7 @@ exports.boolSConvert = function(inp)
 		return "false";
 	}
 }
+exports.turnArrondi = function(inp)
+{
+	return Math.round(inp);
+}
