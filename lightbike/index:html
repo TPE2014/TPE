@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>Lightbike game</title>
+<meta charset="utf-8"/>
+</head>
+<body>
+<canvas id="canv" width="768" height="768">It seems that your browser doesn't know what canvas are. Please update, or use a recent/decent web browser, like Firefox Nightly</canvas>
+<script src="js/require.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
