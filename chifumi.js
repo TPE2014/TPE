@@ -1,5 +1,5 @@
 //JS Code Chifumi by lacaulac
-var javascrpit_Chifumi_Version = "2.4.2";
+var javascrpit_Chifumi_Version = "2.5.0";
 var prev = []; //Ancien jets
 var index = 0;
 var victoires = 0;
@@ -8,6 +8,42 @@ var mnuls = 0;
 var bourinEngaged = 0;
 var bourinEngaged2 = 0;
 var sexe;
+var interval;
+var Gamepad = require("gamepad");
+Gamepad.setUp(interval);
+function searchLoop()
+{
+	// Button 14-> 1, 12->2, 15->3
+	if(navigator.getGamepads().length)
+{
+ctx.clearRect(0, 50, 768, 768);
+var controllerIndex = 0;
+for(var i2=0; i2!=navigator.getGamepads().length;i2++)
+{
+var tmp = Gamepad.getController(i2);
+//console.log(tmp);
+if(tmp)
+{
+var decal = 0;
+//console.log(tmp.buttons.toString());
+Graphics.drawText(ctx, "Controller " + controllerIndex + "(" + tmp.index + ")", 300*controllerIndex, 50);
+for(var i=0;i<tmp.buttons.length;i++)
+{
+//console.log(i);
+Graphics.drawText(ctx, "Button " + i + " state: " + Utilities.boolSConvert(tmp.buttons[i].pressed), 300*controllerIndex, (30*(decal+1)+50));
+decal++;
+}
+for(var i=0;i<tmp.axes.length;i++)
+{
+Graphics.drawText(ctx, "Axe " + i + " state: " + Utilities.turnArrondi(tmp.axes[i]) + " (" + Utilities.troncature(tmp.axes[i], 3) + ")", 300*controllerIndex, (30*(decal+1)+50));
+decal++;
+}
+controllerIndex++;
+}
+}
+controllerIndex = 0;
+}
+}
 // Coups:
 // 1: Pierre
 // 2: Feuille
