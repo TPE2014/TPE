@@ -15,3 +15,7 @@ exports.turnArrondi = function(inp)
 {
 	return Math.round(inp);
 }
+exports.troncature = function(inp, dec)
+{
+	return inp.toFixed(dec);
+}
