@@ -1,5 +1,4 @@
-var theMap = []; // variable utile pour la simplification => en bas  |
-//														                                			\ /
+var theMap = []; // variable utile pour la simplification => en bas						                                			\ /
 
 function setTheMap(map)
 {
@@ -112,7 +111,7 @@ function movePlayer(move, Player, map) // On bouge le joueur N° Player, sur la 
 
 function calc(x, y, XY, dir, map) // dir = +1 ou (exlusif pour ceux qui se posent la question) -1
 {
-	var alpha = 318; // MERDE ALPHA C'EST BIEN ! maiiis heuuuu ... je sais pas quoi mettre ;(
+	var alpha = 318;
 	var top;
 	var topX = map.length - x;
 	var topY = map[0].length - y;
