@@ -7,7 +7,7 @@ exports.setUp = function(interval)
 		e.gamepad.index, e.gamepad.id,
 		e.gamepad.buttons.length, e.gamepad.axes.length);
 		alert("Gamepad connected!");
-		interval = setInterval(function() { searchLoop(context) }, 10);
+		interval = setInterval(function() { gameLoop(context) }, 10); // gameLoop(context) ... exCode : interval = setInterval(function() { searchLoop(context) }, 10);
 });
 }
 exports.getController = function(index)
