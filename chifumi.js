@@ -100,7 +100,7 @@ function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 			return 2;
 		}
 	}
-	return error(682);
+	console.log("NaN");
 }
 function rdm(min, max)
 {
@@ -141,7 +141,7 @@ function chooseShot()//Here comes the AI
 		else if(sexe == 42)
 		{
 			alert("10.255.4.141");
-			return error(16);
+			console.log("10.255.4.141");
 		}
 		else
 		{
