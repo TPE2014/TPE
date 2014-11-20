@@ -20,12 +20,19 @@ function gameLoop(ctx)
 			//console.log(tmp);
 			if(tmp)
 			{
+				var decal = 0;
 				//console.log(tmp.buttons.toString());
 				Graphics.drawText(ctx, "Controller " + controllerIndex + "(" + tmp.index + ")", 300*controllerIndex, 50);
 				for(var i=0;i<tmp.buttons.length;i++)
 				{
 					//console.log(i);
-					Graphics.drawText(ctx, "Button " + i + " state: " + Utilities.boolSConvert(tmp.buttons[i].pressed), 300*controllerIndex, (30*(i+1)+50));
+					Graphics.drawText(ctx, "Button " + i + " state: " + Utilities.boolSConvert(tmp.buttons[i].pressed), 300*controllerIndex, (30*(decal+1)+50));
+					decal++;
+				}
+				for(var i=0;i<tmp.axes.length;i++)
+				{
+					Graphics.drawText(ctx, "Axe " + i + " state: " + Utilities.turnArrondi(tmp.axes[i]) + " (" + tmp.axes[i] + ")", 300*controllerIndex, (30*(decal+1)+50));
+					decal++;
 				}
 				controllerIndex++;
 			}
