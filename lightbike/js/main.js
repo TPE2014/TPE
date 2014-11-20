@@ -31,7 +31,7 @@ function gameLoop(ctx)
 				}
 				for(var i=0;i<tmp.axes.length;i++)
 				{
-					Graphics.drawText(ctx, "Axe " + i + " state: " + Utilities.turnArrondi(tmp.axes[i]) + " (" + Utilities.troncature(tmp.axes[i]) + ")", 300*controllerIndex, (30*(decal+1)+50));
+					Graphics.drawText(ctx, "Axe " + i + " state: " + Utilities.turnArrondi(tmp.axes[i]) + " (" + Utilities.troncature(tmp.axes[i], 3) + ")", 300*controllerIndex, (30*(decal+1)+50));
 					decal++;
 				}
 				controllerIndex++;
