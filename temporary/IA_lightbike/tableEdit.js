@@ -51,4 +51,12 @@ function setTable(map) // affiche le tableau "map" dans mon tableau HTML
 	}
 }
 
-setID('Table'); // flemme de le faire a chaque fois que je reload ma page ... ;)
+
+function setAll(maxX, maxY) // fonction pour plus de rapidite au debug
+{
+	setID('Table');
+	setTheMap(createMap(maxX, maxY));
+	setSize(theMap);
+	addAll();
+	setTable(theMap);
+}
