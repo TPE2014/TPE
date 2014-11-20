@@ -1,0 +1,2 @@
+Le rôle de l'intelligence artificielle dans les jeux vidéos de type FPS est multiple,
+et ce par le biais de nombreuses technologies différentes, telles que le pathfinding, 
