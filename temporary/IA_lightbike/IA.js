@@ -5,6 +5,11 @@ function main(Player, map)
   //C
 }
 
+function cannot_move(pl)
+{
+  console.log("The player " + pl + " can't ove anymore...")
+}
+
 function AI1(map, data)
 {
   var Pia = data.ia.Nbp;
@@ -18,7 +23,7 @@ function AI1(map, data)
       {
         if (testforWall(x, y-1, map))
         {
-          cannot_move();
+          cannot_move(Pia);
         }
         else
         {
