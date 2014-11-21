@@ -7,9 +7,9 @@ function main(Player, map)
 
 function AI1(map, data)
 {
-  var x = data.ia.x;
-  var y = data.ia.y;
   var Pia = data.ia.Nbp;
+  var x = getPlayer(map, Pia)[0];
+  var y = getPlayer(map, Pia)[1];
   if (testforWall(x+1, y, map))
   {
     if (testforWall(x, y+1, map))
