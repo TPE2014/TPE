@@ -35,7 +35,7 @@ function testforWall(x, y, map)
 {
 	if (!isDefined(map[x]))
 	{
-		console.log("error: in function testforWall() undefined value map[x], x=" + x + " in main.js.")
+		console.log("error: in function testforWall() undefined value map[x], x=" + x + " in main.js.");
 		return true;
 	}
 	var wall = map[x][y];
