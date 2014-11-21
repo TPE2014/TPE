@@ -1,3 +1,4 @@
+var lightbike_AI_tableEdit_javascript_Version = "1.5.2";
 var tableID;
 var lines;
 var colones;
