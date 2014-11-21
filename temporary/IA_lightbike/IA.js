@@ -23,21 +23,25 @@ function AI1(map, data)
         }
         else
         {
-          up(Pia);
+          movePlayer("down", Pia, map);
+          setTable(theMap);
         }
       }
       else
       {
-        left(Pia);
+        movePlayer("left", Pia, map);
+        setTable(theMap);
       }
     }
     else
     {
-      down(Pia);
+      movePlayer("up", Pia, map);
+      setTable(theMap);
     }
   }
   else
   {
-    right(Pia);
+    movePlayer("right", Pia, map);
+    setTable(theMap);
   }
 }
