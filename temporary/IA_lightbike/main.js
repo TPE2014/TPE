@@ -1,3 +1,4 @@
+var lightbike_AI_main_javascript = "1.5.2";
 var theMap = []; // variable utile pour la simplification => en bas						                                			\ /
 
 function setTheMap(map)
