@@ -78,10 +78,12 @@ function AI2(map, data)
 			else if (rightZone > leftZone)
 			{
 				movePlayer("right", Pia, map);
+				setTable(theMap);
 			}
 			else if (rightZone < leftZone)
 			{
 				movePlayer("left", Pia, map);
+				setTable(theMap);
 			}
 			else
 			{
@@ -91,6 +93,7 @@ function AI2(map, data)
 		else if (testforWall(x, y-1, map) == false)
 		{
 			movePlayer("down", Pia, map);
+			setTable(theMap);
 		}
 		else
 		{
