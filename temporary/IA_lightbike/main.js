@@ -17,9 +17,22 @@ function createMap(Xmax, Ymax) // cree mon tableau de taille Xmax, Ymax avec une
 	return map;
 }
 
+function isDefined(val)
+{
+	var typeofval = typeof val;
+	if(typeofval != "undefined")
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 function testforWall(x, y, map)
 {
-	if (map[x] == "undefined")
+	if (!isDefined(map[x]))
 	{
 		console.log("error: in function testforWall() undefined value map[x], x=" + x + " in main.js.")
 		return true;
