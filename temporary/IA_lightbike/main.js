@@ -76,11 +76,11 @@ function movePlayer(move, Player, map) // On bouge le joueur N° Player, sur la 
 	var exX = ex[0];
 	var exY = ex[1];
 	map[exX][exY] = "wall";
-	if (move == "up") // on monte /!\Coordonnées y inversées par la gestion des lignes en Html/!\
+	if (move == "down") // on monte /!\Coordonnées y inversées par la gestion des lignes en Html/!\
 	{
 		exY--;
 	}
-	else if (move == "down") // on descend ... voir dessus pour y
+	else if (move == "up") // on descend ... voir dessus pour y
 	{
 		exY++;
 	}
@@ -149,7 +149,7 @@ function calc(x, y, XY, dir, map) // dir = +1 ou (exlusif pour ceux qui se posen
 
 //Simplification pour taper le code dans la console
 
-function up(p) {movePlayer("up", p, theMap);setTable(theMap);}
+function up(p) {movePlayer("down", p, theMap);setTable(theMap);}
 function right(p) {movePlayer("right", p, theMap);setTable(theMap);}
 function left(p) {movePlayer("left", p, theMap);setTable(theMap);}
-function down(p) {movePlayer("down", p, theMap);setTable(theMap);}
+function down(p) {movePlayer("up", p, theMap);setTable(theMap);}
