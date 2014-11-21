@@ -1,5 +1,7 @@
 //here comme the AI code
-//A venir
+
+var lightbike_AI_javascript_Version = "1.0.0";
+
 function main(Player, map)
 {
   //C
