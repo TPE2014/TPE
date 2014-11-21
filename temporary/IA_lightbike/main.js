@@ -19,6 +19,11 @@ function createMap(Xmax, Ymax) // cree mon tableau de taille Xmax, Ymax avec une
 
 function testforWall(x, y, map)
 {
+	if (map[x] == "undefined")
+	{
+		console.log("error: in function testforWall() undefined value map[x], x=" + x + " in main.js.")
+		return true;
+	}
 	var wall = map[x][y];
 	if (wall == " ") // Il n'y a pas de mur, on dit non;
 	{
@@ -34,7 +39,7 @@ function testforWall(x, y, map)
 	}
 	else // On ne sait pas, au cas où on dit "mur"
 	{
-		console.log("error: in function testforWall() unknown value \"" + wall + "\" in funlight.js.");
+		console.log("error: in function testforWall() unknown value \"" + wall + "\" in main.js.");
 		return true;
 	}
 }
@@ -94,7 +99,7 @@ function movePlayer(move, Player, map) // On bouge le joueur N° Player, sur la 
 	}
 	else // ici, on ne doit pas avoir autre chose
 	{
-		console.log("error: in function movePlayer() unknown value \"" + move + "\" in funlight.js.")
+		console.log("error: in function movePlayer() unknown value \"" + move + "\" in main.js.")
 	}
 
 	if (!testforWall(exX, exY, map)) // si il n'y a pas de mur, c'est bon, il bouge
@@ -130,7 +135,7 @@ function calc(x, y, XY, dir, map) // dir = +1 ou (exlusif pour ceux qui se posen
 	}
 	else
 	{
-		console.log("error: in function calc() unknown value \"" + XY + "\" in funlight.js.");
+		console.log("error: in function calc() unknown value \"" + XY + "\" in main.js.");
 	}
 	if (testforWall(x, y, map) == "player")
 	{
