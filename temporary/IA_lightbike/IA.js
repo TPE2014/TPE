@@ -64,7 +64,7 @@ function AI2(map, data)
 	{
 		AI1(map, data);
 	}
-	else if (dir == "down")
+	else if (dir != "noDir")
 	{
 		//y-1
 		if (testforWall(x, y-1, map) || testforWall(x, y-1, map) == "player")
