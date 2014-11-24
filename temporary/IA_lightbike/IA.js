@@ -95,12 +95,8 @@ function AI2(map, data)
 			//movePlayer("down", Pia, map);
 			setTable(theMap);
 		}
-		else
-		{
-			console.log("Maybe a player ?");
-		}
 		//y+1
-		if (testforWall(x, y+1, map) || testforWall(x, y+1, map) == "player")
+		else if (testforWall(x, y+1, map) || testforWall(x, y+1, map) == "player")
 		{
 			var rightZone = calc(x, y, 'x', 1, map);
 			var leftZone = calc(x, y, 'x', -1, map);
@@ -128,12 +124,8 @@ function AI2(map, data)
 			//movePlayer("up", Pia, map);
 			setTable(theMap);
 		}
-		else
-		{
-			console.log("Maybe a player ?");
-		}
 		//x-1
-		if (testforWall(x-1, y, map) || testforWall(x-1, y, map) == "player")
+		else if (testforWall(x-1, y, map) || testforWall(x-1, y, map) == "player")
 		{
 			var topZone = calc(x, y, 'y', 1, map);
 			var bottomZone = calc(x, y, 'y', -1, map);
@@ -161,12 +153,8 @@ function AI2(map, data)
 			//movePlayer("left", Pia, map);
 			setTable(theMap);
 		}
-		else
-		{
-			console.log("Maybe a player ?");
-		}
 		//x+1
-		if (testforWall(x+1, y, map) || testforWall(x+1, y, map) == "player")
+		else if (testforWall(x+1, y, map) || testforWall(x+1, y, map) == "player")
 		{
 			var topZone = calc(x, y, 'y', 1, map);
 			var bottomZone = calc(x, y, 'y', -1, map);
