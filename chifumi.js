@@ -1,6 +1,7 @@
 //JS Code Chifumi by lacaulac
 var javascrpit_Chifumi_Version = "2.5.0";
 var prev = []; //Ancien jets
+var wins = []; //Ancien win du joueur
 var index = 0;
 var victoires = 0;
 var defaites = 0;
@@ -92,15 +93,15 @@ function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 {
 	if(var1 == var2)
 	{
-		return error(685);
+		console.log("685");
 	}
 	else if(var1 < 1 || var1 > 3)
 	{
-		return error(684);
+		console.log("684");
 	}
 	else if(var2 < 1 || var2 >3)
 	{
-		return error(683);
+		console.log("683");
 	}
 
 	if(var1 == 1 || var2 == 1)
@@ -306,11 +307,13 @@ function endRound(win, chPlayer, chAI)//win => Si le joueur a gagné
 	var ret;
 	if(win)
 	{
+		wins.push(win);
 		ret = "Vous avez gagné avec " + transform(chPlayer) + ", contre " + transform(chAI) + "!";
 		victoires++;
 	}
 	else
 	{
+		wins.push(win);
 		ret = "Vous avez perdu avec " + transform(chPlayer) + ", contre " + transform(chAI) + "!";
 		defaites++;
 	}
@@ -334,6 +337,7 @@ function play(choix)
 	prev.push(choix);
 	if(choix == aiShot)//Si l'IA et le joueur ont choisi le même signe
 	{
+		wins.push(null);
 		ret = "Match nul! Vous avez tous les deux choisi " + transform(choix) + "!";
 		mnuls++;
 	}
