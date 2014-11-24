@@ -210,7 +210,7 @@ function chooseShot()//Here comes the AI
 		console.log("5");
 			return response(getLast(lastVar(prev), lastVar3(prev)));
 		}
-		return error(420);
+		console.log("420");
 	}
 	else if(lastVar(prev) == lastVar2(prev) && isDefined(lastVar2(prev)))
 	{
