@@ -99,5 +99,104 @@ function AI2(map, data)
 		{
 			console.log("Maybe a player ?");
 		}
+		//y+1
+		if (testforWall(x, y+1, map) || testforWall(x, y+1, map) == "player")
+		{
+			var rightZone = calc(x, y, 'x', 1, map);
+			var leftZone = calc(x, y, 'x', -1, map);
+			if (rightZone == leftZone)
+			{
+				AI1(map, data); // droite ...
+			}
+			else if (rightZone > leftZone)
+			{
+				movePlayer("right", Pia, map);
+				setTable(theMap);
+			}
+			else if (rightZone < leftZone)
+			{
+				movePlayer("left", Pia, map);
+				setTable(theMap);
+			}
+			else
+			{
+				console.log("error: in function AI2() cannot compare " + rightZone + " and " + leftZone + " in IA.js");
+			}
+		}
+		else if (testforWall(x, y+1, map) == false)
+		{
+			movePlayer("up", Pia, map);
+			setTable(theMap);
+		}
+		else
+		{
+			console.log("Maybe a player ?");
+		}
+		//x-1
+		if (testforWall(x-1, y, map) || testforWall(x-1, y, map) == "player")
+		{
+			var topZone = calc(x, y, 'y', 1, map);
+			var bottomZone = calc(x, y, 'y', -1, map);
+			if (topZone == bottomZone)
+			{
+				AI1(map, data); // droite ...
+			}
+			else if (topZone > bottomZone)
+			{
+				movePlayer("up", Pia, map);
+				setTable(theMap);
+			}
+			else if (topZone < bottomZone)
+			{
+				movePlayer("down", Pia, map);
+				setTable(theMap);
+			}
+			else
+			{
+				console.log("error: in function AI2() cannot compare " + rightZone + " and " + leftZone + " in IA.js");
+			}
+		}
+		else if (testforWall(x-1, y, map) == false)
+		{
+			movePlayer("left", Pia, map);
+			setTable(theMap);
+		}
+		else
+		{
+			console.log("Maybe a player ?");
+		}
+		//x+1
+		if (testforWall(x+1, y, map) || testforWall(x+1, y, map) == "player")
+		{
+			var topZone = calc(x, y, 'y', 1, map);
+			var bottomZone = calc(x, y, 'y', -1, map);
+			if (topZone == bottomZone)
+			{
+				AI1(map, data); // droite ...
+			}
+			else if (topZone > bottomZone)
+			{
+				movePlayer("up", Pia, map);
+				setTable(theMap);
+			}
+			else if (topZone < bottomZone)
+			{
+				movePlayer("down", Pia, map);
+				setTable(theMap);
+			}
+			else
+			{
+				console.log("error: in function AI2() cannot compare " + rightZone + " and " + leftZone + " in IA.js");
+			}
+		}
+		else if (testforWall(x+1, y, map) == false)
+		{
+			movePlayer("right", Pia, map);
+			setTable(theMap);
+		}
+		else
+		{
+			console.log("Maybe a player ?");
+		}
 	}
 }
