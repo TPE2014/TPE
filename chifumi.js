@@ -188,6 +188,7 @@ function chooseShot()//Here comes the AI
 	}
 	else if(test5Wins)
 	{
+		console.log("Cheat");
 		return response(choix);
 	}
 	else if(testAllerRetour3 && isDefined(lastVar4(prev)) || bourinEngaged2 == 30)
