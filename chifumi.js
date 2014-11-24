@@ -159,7 +159,7 @@ function iaShot()
 {
 	play(chooseShot());
 }
-function chooseShot()//Here comes the AI
+function chooseShot(choose = 0)//Here comes the AI
 {
 	var baseTest = isDefined(lastVar(prev)) && isDefined(lastVar(prev)) && isDefined(lastVar(prev));
 	var testAllerRetour1 = ((lastVar(prev) != lastVar2(prev)) && (lastVar2(prev) != lastVar3(prev))) && (lastVar3(prev) != lastVar(prev));
@@ -189,7 +189,7 @@ function chooseShot()//Here comes the AI
 	else if(test5Wins)
 	{
 		console.log("Cheat");
-		return response(choix);
+		return response(choose);
 	}
 	else if(testAllerRetour3 && isDefined(lastVar4(prev)) || bourinEngaged2 == 30)
 	{
@@ -339,7 +339,7 @@ function display(ret)
 function play(choix)
 {
 	var ret;
-	var aiShot = chooseShot();
+	var aiShot = chooseShot(choix);
 	prev.push(choix);
 	if(choix == aiShot)//Si l'IA et le joueur ont choisi le même signe
 	{
