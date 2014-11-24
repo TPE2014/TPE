@@ -1,6 +1,17 @@
 //here comme the AI code
 
 var lightbike_AI_javascript_Version = "1.0.0";
+var dat = {
+	"ia":{
+		"Nbp":1,
+		"pos":{
+			"ex":[
+				0,
+				0
+			]
+		}
+	}
+}
 
 function main(Player, map)
 {
