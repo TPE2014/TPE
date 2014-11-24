@@ -92,7 +92,7 @@ function AI2(map, data)
 		}
 		else if (testforWall(x, y-1, map) == false)
 		{
-			movePlayer("down", Pia, map);
+			//movePlayer("down", Pia, map);
 			setTable(theMap);
 		}
 		else
@@ -125,7 +125,7 @@ function AI2(map, data)
 		}
 		else if (testforWall(x, y+1, map) == false)
 		{
-			movePlayer("up", Pia, map);
+			//movePlayer("up", Pia, map);
 			setTable(theMap);
 		}
 		else
@@ -158,7 +158,7 @@ function AI2(map, data)
 		}
 		else if (testforWall(x-1, y, map) == false)
 		{
-			movePlayer("left", Pia, map);
+			//movePlayer("left", Pia, map);
 			setTable(theMap);
 		}
 		else
@@ -191,7 +191,7 @@ function AI2(map, data)
 		}
 		else if (testforWall(x+1, y, map) == false)
 		{
-			movePlayer("right", Pia, map);
+			//movePlayer("right", Pia, map);
 			setTable(theMap);
 		}
 		else
