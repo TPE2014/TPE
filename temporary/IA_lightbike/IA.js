@@ -184,7 +184,7 @@ function AI2(map, data)
 		}
 		else
 		{
-			console.log("Maybe a player ?");
+			AI1(map, data);
 		}
 	}
 }
