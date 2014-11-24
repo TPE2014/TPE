@@ -167,6 +167,7 @@ function chooseShot()//Here comes the AI
 	var testAllerRetour3 = (lastVar4(prev) == lastVar3(prev) && lastVar2(prev) == lastVar(prev) && lastVar3(prev) != lastVar2(prev));
 	var testAllerRetour4 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) == lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
 	//var testAllerRetour5 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) != lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
+	var test5Wins = (lastVar(wins) == lastVar2(wins) && lastVar(wins) == lastVar3(wins) && lastVar(wins) == lastVar4(wins) && lastVar(wins) == lastVar5(wins) && isDefined(lastVar5(wins)));
 	if(index == 0) // Premier coup
 	{
 	console.log("1");
@@ -184,6 +185,10 @@ function chooseShot()//Here comes the AI
 		{
 			return response(3);
 		}
+	}
+	else if(test5Wins)
+	{
+		return response(choix);
 	}
 	else if(testAllerRetour3 && isDefined(lastVar4(prev)) || bourinEngaged2 == 30)
 	{
