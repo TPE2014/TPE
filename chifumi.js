@@ -10,6 +10,7 @@ var mnuls = 0;
 var bourinEngaged = 0;
 var bourinEngaged2 = 0;
 var sexe;
+var tmpGamepad;
 var interval;
 var Gamepad = require("gamepad");
 var Utilities = require("utilities");
@@ -23,7 +24,7 @@ function searchLoop()
 		var controllerIndex = 0;
 		for(var i2=0; i2!=navigator.getGamepads().length;i2++)
 		{
-			var tmp = Gamepad.getController(i2);
+			tmpGamepad = Gamepad.getController(i2);
 			//console.log(tmp);
 		}
 	}
