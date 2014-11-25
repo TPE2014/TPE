@@ -57,17 +57,10 @@ function detectButton(tmp)
 		}
 	}
 }
-/*function detectBBoucle(tmp)
+function detectBBoucle(tmp)
 {
-	var a = true;
-	while (a)
-	{
-		if (detectButton(tmp))
-		{
-			a = false;
-		}
-	}
-}*/
+	interval = setInterval(function() { detectButton(tmp) }, 10);
+}
 
 function init()
 {
