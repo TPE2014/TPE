@@ -57,7 +57,7 @@ function detectButton(tmp)
 		}
 	}
 }
-function detectBBoucle(tmp)
+/*function detectBBoucle(tmp)
 {
 	var a = true;
 	while (a)
@@ -67,7 +67,7 @@ function detectBBoucle(tmp)
 			a = false;
 		}
 	}
-}
+}*/
 
 function init()
 {
