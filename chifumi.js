@@ -12,6 +12,7 @@ var bourinEngaged2 = 0;
 var sexe;
 var interval;
 var Gamepad = require("gamepad");
+var Utilities = require("utilities");
 Gamepad.setUp(interval);
 function searchLoop()
 {
@@ -50,6 +51,22 @@ controllerIndex = 0;
 // 1: Pierre
 // 2: Feuille
 // 3: Ciseaux
+function detectButton(tmp)
+{
+	if (Utilities.boolSConvert(tmp.buttons[14].pressed))
+	{
+		play(1);
+	}
+	else if (Utilities.boolSConvert(tmp.buttons[12].pressed))
+	{
+		play(2);
+	}
+	else if (Utilities.boolSConvert(tmp.buttons[15].pressed))
+	{
+		play(3);
+	}
+}
+
 function init()
 {
 	sexe = prompt("Êtes vous un homme? (1/0)");
