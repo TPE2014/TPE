@@ -37,19 +37,19 @@ function detectButton(tmp)
 {
 	if(tmp)
 	{
-		if (Utilities.boolSConvert(tmp.buttons[14].pressed))
+		if (tmp.buttons[14].pressed)
 		{
 			console.log("Button 14 pressed.");
 			play(1);
 			return true;
 		}
-		else if (Utilities.boolSConvert(tmp.buttons[12].pressed))
+		else if (tmp.buttons[12].pressed)
 		{
 			console.log("Button 12 pressed.");
 			play(2);
 			return true;
 		}
-		else if (Utilities.boolSConvert(tmp.buttons[15].pressed))
+		else if (tmp.buttons[15].pressed)
 		{
 			console.log("Button 15 pressed.");
 			play(3);
