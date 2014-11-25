@@ -59,11 +59,12 @@ function detectButton(tmp)
 }
 function detectBBoucle(tmp)
 {
-	while (true)
+	var a = true;
+	while (a)
 	{
 		if (detectButton(tmp))
 		{
-			break;
+			a = false;
 		}
 	}
 }
