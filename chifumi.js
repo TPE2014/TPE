@@ -59,7 +59,8 @@ function detectButton(tmp)
 }
 function detectBBoucle(tmp)
 {
-	interval = setInterval(function() { detectButton(tmp) }, 1000);
+	interval = setInterval(function() { if(detectButton(tmp)){break;} }, 1000);
+	return interval;
 }
 
 function init()
