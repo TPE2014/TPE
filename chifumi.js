@@ -3,6 +3,7 @@ var javascrpit_Chifumi_Version = "2.5.0";
 var prev = []; //Ancien jets
 var wins = []; //Ancien win du joueur
 var index = 0;
+var winerEngaged = 0;
 var victoires = 0;
 var defaites = 0;
 var mnuls = 0;
@@ -187,8 +188,10 @@ function chooseShot(choose = 0)//Here comes the AI
 			return response(3);
 		}
 	}
-	else if(test3Wins)
+	else if(test3Wins || winerEngaged >= 1)
 	{
+		winerEngaged++;
+		if(winerEngaged >= 3){ winerEngaged = 0; }
 		console.log("Cheat");
 		return response(choose);
 	}
