@@ -13,6 +13,7 @@ var sexe;
 var interval;
 var Gamepad = require("gamepad");
 var Utilities = require("utilities");
+function play(choix);
 Gamepad.setUp(interval);
 function searchLoop()
 {
@@ -53,17 +54,36 @@ controllerIndex = 0;
 // 3: Ciseaux
 function detectButton(tmp)
 {
-	if (Utilities.boolSConvert(tmp.buttons[14].pressed))
+	if(tmp)
 	{
-		play(1);
+		if (Utilities.boolSConvert(tmp.buttons[14].pressed))
+		{
+			console.log("Button 14 pressed.");
+			play(1);
+			return true;
+		}
+		else if (Utilities.boolSConvert(tmp.buttons[12].pressed))
+		{
+			console.log("Button 12 pressed.");
+			play(2);
+			return true;
+		}
+		else if (Utilities.boolSConvert(tmp.buttons[15].pressed))
+		{
+			console.log("Button 15 pressed.");
+			play(3);
+			return true;
+		}
 	}
-	else if (Utilities.boolSConvert(tmp.buttons[12].pressed))
+}
+function detectBBoucle(tmp)
+{
+	while (true)
 	{
-		play(2);
-	}
-	else if (Utilities.boolSConvert(tmp.buttons[15].pressed))
-	{
-		play(3);
+		if (detectButton(tmp))
+		{
+			break;
+		}
 	}
 }
 
