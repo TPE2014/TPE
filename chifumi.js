@@ -13,7 +13,7 @@ var sexe;
 var interval;
 var Gamepad = require("gamepad");
 var Utilities = require("utilities");
-function play(choix);
+//function play(choix);
 Gamepad.setUp(interval);
 function searchLoop()
 {
