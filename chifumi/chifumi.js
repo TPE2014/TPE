@@ -117,9 +117,16 @@ function detectButton(tmp)
 }
 function detectBBoucle(tmp = tmpGamepad)
 {
-	console.log("Start Detecting Gamepads buttons.")
-	interval = setInterval(function() { return detectButton(tmp); }, 1000);
-	return interval;
+	if(tmp)
+	{
+		console.log("Start Detecting Gamepads buttons.")
+		interval = setInterval(function() { return detectButton(tmp); }, 1000);
+		return interval;
+	}
+	else
+	{
+		console.warn("No gamepads detected. ;(")
+	}
 }
 
 function init()
