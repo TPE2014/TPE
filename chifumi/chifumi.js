@@ -400,11 +400,19 @@ function endRound(win, chPlayer, chAI)//win => Si le joueur a gagné
 }
 function display(ret)
 {
+	
 	var divOut = document.getElementById("sortie");
 	var divVictoires = document.getElementById("victoires");
 	var divDefaites = document.getElementById("defaites");
 	var divDraw = document.getElementById("draw");
-	divOut.innerHTML = ret + "<br/>" + divOut.innerHTML
+	if (index == 1){
+		index++;
+		divOut.innerHTML = ret + "<br/>Partie comencée !";
+	}
+	else
+	{
+		divOut.innerHTML = ret + "<br/>" + divOut.innerHTML
+	}
 	divVictoires.innerHTML = victoires;
 	divDefaites.innerHTML = defaites;
 	divDraw.innerHTML = mnuls;
