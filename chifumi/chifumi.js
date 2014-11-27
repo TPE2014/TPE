@@ -50,6 +50,7 @@ function getVersion()
 	var html = {};
 	html.version = document.getElementById('HTML_Chifumi_Version').value;
 	var js = {};
+	js.require = {};
 	js.chifumi = javascript_Chifumi_Version;
 	js.require.v = Javascript_Require_License_Version;
 	js.require.l = Javascript_Require_License_Link;
