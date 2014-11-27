@@ -33,7 +33,7 @@ function searchLoop()
 // 1: Pierre
 // 2: Feuille
 // 3: Ciseaux
-function getVersion()
+/*function getVersion()
 {
 	var html = {};
 	html.version = document.getElementById('HTML_Chifumi_Version').value;
@@ -51,7 +51,7 @@ function getVersion()
 	text += "Gamepad JS code : " + js.gamepad + "\n";
 	text += "Utilities code : " + js.utilities + "\n";
 	alert(text);
-}
+}*/
 function detectButton(tmp)
 {
 	if(tmp)
