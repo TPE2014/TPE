@@ -76,7 +76,7 @@ function detectButton(tmp)
 		}
 	}
 }
-function detectBBoucle(tmp = tmpGamepad)
+function detectBBoucle(tmp)
 {
 	console.log("Start Detecting Gamepads buttons.")
 	interval = setInterval(function() { return detectButton(tmp); }, 1000);
