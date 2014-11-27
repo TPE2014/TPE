@@ -407,7 +407,7 @@ function display(ret)
 	var divDraw = document.getElementById("draw");
 	if (index == 1){
 		index++;
-		divOut.innerHTML = ret + "<br/>Partie comencée !";
+		divOut.innerHTML = ret + "<br/>Partie comencé!";
 	}
 	else
 	{
