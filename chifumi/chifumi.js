@@ -33,6 +33,18 @@ function searchLoop()
 // 1: Pierre
 // 2: Feuille
 // 3: Ciseaux
+function isDefined(val)
+{
+	var typeofval = typeof val;
+	if(typeofval != "undefined")
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
 function getVersion()
 {
 	var html = {};
@@ -54,27 +66,54 @@ function getVersion()
 }
 function detectButton(tmp)
 {
-	if(tmp)
+	if(isDefined(tmp.buttons[15]))
 	{
-		if (tmp.buttons[14].pressed || tmp.buttons[1].pressed)
+		if (tmp.buttons[14].pressed)
 		{
 			console.log("Button 14 pressed.");
 			play(1);
 			return true;
 		}
-		else if (tmp.buttons[12].pressed || tmp.buttons[2].pressed)
+		else if (tmp.buttons[12].pressed)
 		{
 			console.log("Button 12 pressed.");
 			play(2);
 			return true;
 		}
-		else if (tmp.buttons[15].pressed || tmp.buttons[3].pressed)
+		else if (tmp.buttons[15].pressed)
 		{
 			console.log("Button 15 pressed.");
 			play(3);
 			return true;
 		}
 	}
+	else if (isDefined(tmp.buttons[3]))
+	{
+		if (tmp.buttons[1].pressed)
+		{
+			console.log("Button 1 pressed.");
+			play(1);
+			return true;
+		}
+		else if (tmp.buttons[2].pressed)
+		{
+			console.log("Button 2 pressed.");
+			play(2);
+			return true;
+		}
+		else if (tmp.buttons[3].pressed)
+		{
+			console.log("Button 3 pressed.");
+			play(3);
+			return true;
+		}
+	}
+	else
+	{
+		console.warn("No buttons can be detected.");
+		return false;
+	}
+		
 }
 function detectBBoucle(tmp = tmpGamepad)
 {
@@ -176,18 +215,6 @@ function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 function rdm(min, max)
 {
 	return Math.floor((Math.random() * max) + min);
-}
-function isDefined(val)
-{
-	var typeofval = typeof val;
-	if(typeofval != "undefined")
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
 }
 function iaShot()
 {
