@@ -2,6 +2,7 @@
 var javascript_Chifumi_Version = "2.7.4";
 var prev = []; //Ancien jets
 var wins = []; //Ancien win du joueur
+var canCh = true;
 var index = 0;
 var winerEngaged = 0;
 var victoires = 0;
@@ -237,7 +238,7 @@ function chooseShot(choose = 0)//Here comes the AI
 	var testAllerRetour4 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) == lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
 	//var testAllerRetour5 = (lastVar6(prev) == lastVar5(prev) && lastVar5(prev) != lastVar2(prev) && lastVar5(prev) != lastVar3(prev));
 	var test5Wins = (lastVar(wins) == lastVar2(wins) && lastVar(wins) == lastVar3(wins) && lastVar(wins) == lastVar4(wins) && lastVar(wins) == lastVar5(wins) && isDefined(lastVar5(wins)) && lastVar(wins) == true);
-	var test3Wins = (lastVar(wins) == lastVar2(wins) && lastVar(wins) == lastVar3(wins) && isDefined(lastVar3(wins)) && lastVar(wins) == true);
+	var test3Wins = (lastVar(wins) == lastVar2(wins) && lastVar(wins) == lastVar3(wins) && isDefined(lastVar3(wins)) && lastVar(wins) == true && canCh == true);
 	if(index == 0) // Premier coup
 	{
 	console.log("1");
