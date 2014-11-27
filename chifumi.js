@@ -1,5 +1,5 @@
 //JS Code Chifumi by lacaulac
-var javascrpit_Chifumi_Version = "2.5.0";
+var javascrpit_Chifumi_Version = "2.4.0";
 var prev = []; //Ancien jets
 var wins = []; //Ancien win du joueur
 var index = 0;
@@ -10,59 +10,12 @@ var mnuls = 0;
 var bourinEngaged = 0;
 var bourinEngaged2 = 0;
 var sexe;
-var tmpGamepad;
-var interval;
-var Gamepad = require("gamepad");
-var Utilities = require("utilities");
 //function play(choix);
-Gamepad.setUp(interval);
-function searchLoop()
-{
-	// Button 14-> 1, 12->2, 15->3
-	if(navigator.getGamepads().length)
-	{
-		var controllerIndex = 0;
-		for(var i2=0; i2!=navigator.getGamepads().length;i2++)
-		{
-			tmpGamepad = Gamepad.getController(i2);
-			//console.log(tmp);
-		}
-	}
 }
 // Coups:
 // 1: Pierre
 // 2: Feuille
 // 3: Ciseaux
-function detectButton(tmp)
-{
-	if(tmp)
-	{
-		if (tmp.buttons[14].pressed)
-		{
-			console.log("Button 14 pressed.");
-			play(1);
-			return true;
-		}
-		else if (tmp.buttons[12].pressed)
-		{
-			console.log("Button 12 pressed.");
-			play(2);
-			return true;
-		}
-		else if (tmp.buttons[15].pressed)
-		{
-			console.log("Button 15 pressed.");
-			play(3);
-			return true;
-		}
-	}
-}
-function detectBBoucle(tmp)
-{
-	interval = setInterval(function() { if(detectButton(tmp)){return true;} }, 1000);
-	return interval;
-}
-
 function init()
 {
 	sexe = prompt("Êtes vous un homme? (1/0)");
