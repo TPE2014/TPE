@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head class="head">
-    <input type="hidden" id="HTML_Chifumi_Version" value="2.0" />
+    <input type="hidden" id="HTML_Chifumi_Version" value="2.2" />
     <title class="title">IA Chifumi</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="chifumi.css">
@@ -11,6 +11,7 @@
     <br/>
     <h2>Victoires: <span id="victoires">0</span> | Défaites: <span id="defaites">0</span> | Matchs nuls: <span id="draw">0</span></h2><br/>
     <button onclick="play(1)">Pierre</button><button onclick="play(2)">Feuille</button><button onclick="play(3)">Ciseaux</button>
+    <button onclick="detectBBoucle()" id="padStart">Launch gamepad mode</button>
     <div id="sortie">
       La partie n'a pas commencé!
     </div>
