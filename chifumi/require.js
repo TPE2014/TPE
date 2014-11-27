@@ -1,5 +1,5 @@
-//var Javascript_Require_License_Version = "GNU Lesser General Public License V3";
-//var Javascript_Require_License_Link = "http://www.gnu.org/licenses/";
+var Javascript_Require_License_Version = "GNU Lesser General Public License V3";
+var Javascript_Require_License_Link = "http://www.gnu.org/licenses/";
 //
 // This file is part of Smoothie.
 //
