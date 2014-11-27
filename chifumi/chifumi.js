@@ -16,6 +16,25 @@ var Gamepad = require("gamepad");
 var Utilities = require("utilities");
 //function play(choix);
 Gamepad.setUp(interval);
+function getVersion()
+{
+	var html = {};
+	html.version = document.getElementById('HTML_Chifumi_Version').value;
+	var js = {};
+	js.chifumi = javascript_Chifumi_Version;
+	js.require.v = Javascript_Require_License_Version;
+	js.require.l = Javascript_Require_License_Link;
+	js.gamepad = Gamepad.getjavascript_Gamepad_Chifumi_Version();
+	js.utilities = Utilities.getjavascript_Utilities_Chifumi_Version();
+	var text = "Version of multiples code :\n";
+	text += "HTML5 Chifumi code version : " + html.version + "\n";
+	text += "Javascript Chifumi Code versions : \n";
+	text += "Main javascript : " + js.chifumi + "\n";
+	text += "Require code : " + js.require.v + "\n";
+	text += "Gamepad JS code : " + js.gamepad + "\n";
+	text += "Utilities code : " + js.utilities + "\n";
+	alert(text);
+}
 function searchLoop()
 {
 	// Button 14-> 1, 12->2, 15->3
