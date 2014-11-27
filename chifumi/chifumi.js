@@ -59,6 +59,7 @@ function detectButton(tmp)
 }
 function detectBBoucle(tmp = tmpGamepad)
 {
+	console.log("Start Detecting Gamepads buttons.")
 	interval = setInterval(function() { return detectButton(tmp); }, 1000);
 	return interval;
 }
@@ -107,15 +108,15 @@ function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 {
 	if(var1 == var2)
 	{
-		console.log("685");
+		console.error("685");
 	}
 	else if(var1 < 1 || var1 > 3)
 	{
-		console.log("684");
+		console.error("684");
 	}
 	else if(var2 < 1 || var2 >3)
 	{
-		console.log("683");
+		console.error("683");
 	}
 
 	if(var1 == 1 || var2 == 1)
@@ -151,7 +152,7 @@ function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 			return 2;
 		}
 	}
-	console.log("NaN");
+	console.error("NaN");
 }
 function rdm(min, max)
 {
@@ -194,7 +195,7 @@ function chooseShot(choose = 0)//Here comes the AI
 		else if(sexe == 42)
 		{
 			alert("10.255.4.141");
-			console.log("10.255.4.141");
+			console.warn("10.255.4.141");
 		}
 		else
 		{
@@ -205,7 +206,7 @@ function chooseShot(choose = 0)//Here comes the AI
 	{
 		winerEngaged++;
 		if(winerEngaged >= 3){ winerEngaged = 0; }
-		console.log("Cheat");
+		console.info("Cheat");
 		return response(choose);
 	}
 	else if(testAllerRetour3 && isDefined(lastVar4(prev)) || bourinEngaged2 == 30)
