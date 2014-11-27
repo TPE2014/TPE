@@ -1,5 +1,5 @@
 //JS Code Chifumi by lacaulac and JësFot
-var javascrpit_Chifumi_Version = "2.7.3";
+var javascript_Chifumi_Version = "2.7.3";
 var prev = []; //Ancien jets
 var wins = []; //Ancien win du joueur
 var index = 0;
