@@ -17,3 +17,8 @@ exports.getController = function(index)
   var tmp = navigator.getGamepads()[index];
   return tmp;
 }
+
+exports.getjavascript_Gamepad_Chifumi_Version = function()
+{
+  return javascript_Gamepad_Chifumi_Version;
+}
