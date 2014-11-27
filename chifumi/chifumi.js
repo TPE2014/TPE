@@ -37,19 +37,19 @@ function detectButton(tmp)
 {
 	if(tmp)
 	{
-		if (tmp.buttons[14].pressed)
+		if (tmp.buttons[14].pressed || tmp.buttons[1].pressed)
 		{
 			console.log("Button 14 pressed.");
 			play(1);
 			return true;
 		}
-		else if (tmp.buttons[12].pressed)
+		else if (tmp.buttons[12].pressed || tmp.buttons[2].pressed)
 		{
 			console.log("Button 12 pressed.");
 			play(2);
 			return true;
 		}
-		else if (tmp.buttons[15].pressed)
+		else if (tmp.buttons[15].pressed || tmp.buttons[3].pressed)
 		{
 			console.log("Button 15 pressed.");
 			play(3);
@@ -57,9 +57,9 @@ function detectButton(tmp)
 		}
 	}
 }
-function detectBBoucle(tmp)
+function detectBBoucle(tmp = tmpGamepad)
 {
-	interval = setInterval(function() { if(detectButton(tmp)){return true;} }, 1000);
+	interval = setInterval(function() { return detectButton(tmp); }, 1000);
 	return interval;
 }
 
