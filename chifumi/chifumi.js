@@ -175,15 +175,15 @@ function getLast(var1, var2)// Nous donne le troisieme nombre (1, 2, 3)
 {
 	if(var1 == var2)
 	{
-		console.error("685");
+		console.error(685);
 	}
 	else if(var1 < 1 || var1 > 3)
 	{
-		console.error("684");
+		console.error(684);
 	}
 	else if(var2 < 1 || var2 >3)
 	{
-		console.error("683");
+		console.error(683);
 	}
 
 	if(var1 == 1 || var2 == 1)
