@@ -16,6 +16,23 @@ var Gamepad = require("gamepad");
 var Utilities = require("utilities");
 //function play(choix);
 Gamepad.setUp(interval);
+function searchLoop()
+{
+	// Button 14-> 1, 12->2, 15->3
+	if(navigator.getGamepads().length)
+	{
+		var controllerIndex = 0;
+		for(var i2=0; i2!=navigator.getGamepads().length;i2++)
+		{
+			tmpGamepad = Gamepad.getController(i2);
+			//console.log(tmp);
+		}
+	}
+}
+// Coups:
+// 1: Pierre
+// 2: Feuille
+// 3: Ciseaux
 function getVersion()
 {
 	var html = {};
@@ -35,23 +52,6 @@ function getVersion()
 	text += "Utilities code : " + js.utilities + "\n";
 	alert(text);
 }
-function searchLoop()
-{
-	// Button 14-> 1, 12->2, 15->3
-	if(navigator.getGamepads().length)
-	{
-		var controllerIndex = 0;
-		for(var i2=0; i2!=navigator.getGamepads().length;i2++)
-		{
-			tmpGamepad = Gamepad.getController(i2);
-			//console.log(tmp);
-		}
-	}
-}
-// Coups:
-// 1: Pierre
-// 2: Feuille
-// 3: Ciseaux
 function detectButton(tmp)
 {
 	if(tmp)
