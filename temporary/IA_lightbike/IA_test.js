@@ -5,22 +5,22 @@ function getDirection(x1, y1, x2, y2)
 {
   if (x1 > x2)
   {
-    console.log("down ?");
+    console.log("left");
     return "down";
   }
   else if (x1 < x2)
   {
-    console.log("up");
+    console.log("right");
     return "up";
   }
   else if (y1 > y2)
   {
-    console.log("left");
+    console.log("down");
     return "left";
   }
   else if (y1 < y2)
   {
-    console.log("right");
+    console.log("up");
     return "right";
   }
   else
