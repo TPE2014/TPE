@@ -1,9 +1,13 @@
-var lightbike_AI_main_javascript = "1.5.2";
+var lightbike_AI_main_javascript = "1.6";
 var theMap = []; // variable utile pour la simplification => en bas						                                			\ /
 
 function setTheMap(map)
 {
 	theMap = map;
+}
+var getTheMap = function()
+{
+	return theMap;
 }
 
 function createMap(Xmax, Ymax) // cree mon tableau de taille Xmax, Ymax avec une valeur predefinie
@@ -35,7 +39,7 @@ function testforWall(x, y, map)
 {
 	if (!isDefined(map[x]))
 	{
-		console.log("error: in function testforWall() undefined value map[x], x=" + x + " in main.js.");
+		console.error("Error: in function testforWall() undefined value map[x], x=" + x + " in main.js.");
 		return true;
 	}
 	var wall = map[x][y];
@@ -53,7 +57,7 @@ function testforWall(x, y, map)
 	}
 	else // On ne sait pas, au cas où on dit "mur"
 	{
-		console.log("error: in function testforWall() unknown value \"" + wall + "\" in main.js.");
+		console.error("Error: in function testforWall() unknown value \"" + wall + "\" in main.js.");
 		return true;
 	}
 }
@@ -113,7 +117,7 @@ function movePlayer(move, Player, map) // On bouge le joueur N° Player, sur la 
 	}
 	else // ici, on ne doit pas avoir autre chose
 	{
-		console.log("error: in function movePlayer() unknown value \"" + move + "\" in main.js.")
+		console.error("Error: in function movePlayer() unknown value \"" + move + "\" in main.js.")
 	}
 
 	if (!testforWall(exX, exY, map)) // si il n'y a pas de mur, c'est bon, il bouge
@@ -149,7 +153,7 @@ function calc(x, y, XY, dir, map) // dir = +1 ou (exlusif pour ceux qui se posen
 	}
 	else
 	{
-		console.log("error: in function calc() unknown value \"" + XY + "\" in main.js.");
+		console.error("Error: in function calc() unknown value \"" + XY + "\" in main.js.");
 	}
 	if (testforWall(x, y, map) == "player")
 	{
@@ -165,6 +169,36 @@ function calc(x, y, XY, dir, map) // dir = +1 ou (exlusif pour ceux qui se posen
 	}
 	return alpha;
 }
+
+function getDirection(x1, y1, x2, y2)
+{
+	if (x1 > x2)
+	{
+		console.log("left");
+		return "left";
+	}
+	else if (x1 < x2)
+	{
+		console.log("right");
+		return "right";
+	}
+	else if (y1 > y2)
+	{
+		console.log("down");
+		return "down";
+	}
+	else if (y1 < y2)
+	{
+		console.log("up");
+		return "up";
+	}
+	else
+	{
+		console.warn("Warning : in function getDirection() cannot compare " + x1 + " with " + x2 + " or " + y1 + " with " + y2 + " in main.js");
+		return "noDir";
+	}
+}
+
 
 //Simplification pour taper le code dans la console
 
