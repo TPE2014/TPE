@@ -1,16 +1,16 @@
-//here comme the AI code
-
-var lightbike_AI_javascript_Version = "1.0.0";
+var lightbike_AI_javascript_Version = "1.2";
 var dat = {
 	"ia":{
+		"P":1,
 		"Nbp":1,
 		"pos":{
 			"ex":[
-				0,
-				0
+				5,
+				5
 			]
 		}
-	}
+	},
+	"map":getTheMap
 }
 
 function main(Player, map)
@@ -20,7 +20,7 @@ function main(Player, map)
 
 function cannot_move(pl)
 {
-  console.log("The player " + pl + " can't ove anymore...")
+  console.log("The player " + pl + " can't move anymore...")
 }
 
 function AI1(map, data)
