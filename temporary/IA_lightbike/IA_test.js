@@ -3,7 +3,7 @@ var fileName = "IA_test.js";
 
 function getDirection(x1, y1, x2, y2)
 {
-  else if (x1 > x2)
+  if (x1 > x2)
   {
     console.log("down ?");
     return "down";
