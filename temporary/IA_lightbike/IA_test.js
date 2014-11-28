@@ -26,5 +26,26 @@ function getDirection(x1, y1, x2, y2)
   else
   {
     console.error("Error : in function getDirection() cannot compare " + x1 + " with " + x2 + " or " + y1 + " with " + y2 + " in " + fileName);
+    return "noDir";
+  }
+}
+
+function cannot_move(Player)
+{
+  console.log("Player " + Player + " can't move anymore");
+}
+
+function AI(data)
+{
+  var Pia = data.ia.P;
+  var exX = data.ia.pos.ex[0];
+  var exY = data.ia.pos.ex[1];
+  var map = data.map;
+  var x = getPlayer(map, Pia)[0];
+  var y = getPlayer(map, Pia)[1];
+  var dir = getDirection(exX, exY, x, y);
+  if (dir == "noDir")
+  {
+    AI1(map, data);
   }
 }
