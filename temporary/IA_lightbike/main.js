@@ -265,9 +265,9 @@ function wallInZone(x1, y1, x2, y2, map) //cherche le nombre de mur dans cette z
 	}
 	else
 	{
-		for (var i=0; i<tallX; i++)
+		for (var i=x1; i<tallX; i++)
 		{
-			for (var j=0; j < tallY; j++)
+			for (var j=y1; j < tallY; j++)
 			{
 				if (testforWall(i, j, map) || testforWall(i, j, map) == "player")
 				{
