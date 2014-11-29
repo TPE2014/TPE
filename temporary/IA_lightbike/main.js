@@ -247,7 +247,9 @@ function wallInZone(x1, y1, x2, y2, map) //cherche le nombre de mur dans cette z
 	var nbWall = 0;
 	var tall = getTall(x1, x2, y1, y2);
 	var tallX = getTall(x1, x2, 1, 1);
+	console.log("tallX=" + tallX);
 	var tallY = getTall(1, 1, y1, y2);
+	console.log("tallY=" + tallY);
 	if (tall == 0 || tall == 1)
 	{
 		console.warn("Warning : in function wallInZone([4]) tall(" + tall + ") is too small in main.js");
@@ -265,10 +267,13 @@ function wallInZone(x1, y1, x2, y2, map) //cherche le nombre de mur dans cette z
 	}
 	else
 	{
+		console.log("Correct 1");
 		for (var i=x1; i<tallX; i++)
 		{
+			console.log("I=" + i);
 			for (var j=y1; j < tallY; j++)
 			{
+				console.log("J=" + j);
 				if (testforWall(i, j, map) || testforWall(i, j, map) == "player")
 				{
 					nbWall++;
