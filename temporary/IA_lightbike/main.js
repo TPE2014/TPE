@@ -1,4 +1,4 @@
-var lightbike_AI_main_javascript = "1.6";
+var lightbike_AI_main_javascript = "1.7";
 var theMap = []; // variable utile pour la simplification => en bas						                                			\ /
 
 function setTheMap(map)
