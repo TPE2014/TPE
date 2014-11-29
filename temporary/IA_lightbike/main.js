@@ -22,7 +22,7 @@ function createMap(Xmax, Ymax) // cree mon tableau de taille Xmax, Ymax avec une
 	return map;
 }
 
-function isDefined(val)
+function isDefined(val) // Verifie que val possede une valeur
 {
 	var typeofval = typeof val;
 	if(typeofval != "undefined")
@@ -35,7 +35,7 @@ function isDefined(val)
 	}
 }
 
-function testforWall(x, y, map)
+function testforWall(x, y, map) // On verifie si il a un mur en x, y
 {
 	if (!isDefined(map[x]))
 	{
@@ -51,7 +51,7 @@ function testforWall(x, y, map)
 	{
 		return true;
 	}
-	else if (wall == "P1" || wall == "P2") // un joueur, ca va pas tarder a devenir un mur...
+	else if (wall == "P1" || wall == "P2" || wall == "P0") // un joueur, ca va pas tarder a devenir un mur...
 	{
 		return "player";
 	}
@@ -132,35 +132,35 @@ function movePlayer(move, Player, map) // On bouge le joueur N° Player, sur la 
 	}
 }
 
-function calc(x, y, XY, dir, map) // dir = +1 ou (exlusif pour ceux qui se posent la question) -1
+function calc(x, y, XY, dir, map) // dir = +1 ou -1; sert a donner la taille de la ligne donnée
 {
 	var alpha = 318;
 	var top;
-	var topX = map.length - x;
-	var topY = map[0].length - y;
+	var topX = map.length - x; // On doit connetre la taille de la map sur sa longeur
+	var topY = map[0].length - y; // ou largeur
 	var mX, mY;
-	if (XY == 'x')
+	if (XY == 'x') // On voit si le programme veut tester la taille sur les x
 	{
 		mX = dir;
 		mY = 0;
 		top = topX;
 	}
-	else if (XY = 'y')
+	else if (XY = 'y') // Ou sur les y
 	{
 		mX = 0;
 		mY = dir;
 		top = topY;
 	}
-	else
+	else // Ni x, ni y : on peut pas faire
 	{
 		console.error("Error: in function calc() unknown value \"" + XY + "\" in main.js.");
 	}
-	if (testforWall(x, y, map) == "player")
+	if (testforWall(x, y, map) == "player") // Si on demare sur un joueur...
 	{
-		for (var i = 0; i < top; i++) {
+		for (var i = 0; i < top; i++) { // On lance la boucle de verification
 			var tmpX = x + (mX * i);
 			var tmpY = y + (mY * i);
-			if (testforWall(tmpX, tmpY, map) == true)
+			if (testforWall(tmpX, tmpY, map) == true) // Si on trouve un mur, on renvoie le nombre de 'case' avant
 			{
 				alpha = i;
 				break;
@@ -170,7 +170,7 @@ function calc(x, y, XY, dir, map) // dir = +1 ou (exlusif pour ceux qui se posen
 	return alpha;
 }
 
-function getDirection(x1, y1, x2, y2)
+function getDirection(x1, y1, x2, y2) // Done la direction prise sur UN mouvement pour 1 position precedante
 {
 	if (x1 > x2)
 	{
@@ -192,13 +192,92 @@ function getDirection(x1, y1, x2, y2)
 		console.log("up");
 		return "up";
 	}
-	else
+	else // N'a peut-etre pas encore bougé, ou erreur
 	{
 		console.warn("Warning : in function getDirection() cannot compare " + x1 + " with " + x2 + " or " + y1 + " with " + y2 + " in main.js");
 		return "noDir";
 	}
 }
 
+function getTall(x1, x2, y1, y2) // Renvoie la taille de la zone donnée
+{
+	var tX, tY;
+	if (y1 < y2)
+	{
+		tY = y2-y1;
+	}
+	else if (y1 > y2)
+	{
+		tY = y1-y2;
+	}
+	else if (y1 == y2)
+	{
+		tY = 0;
+	}
+	else
+	{
+		console.error("Error : in function getTall([4]) cannot compare " + y1 + " and " + y2 + " in main.js");
+		tY = -1;
+	}
+	
+	if (x1 < x2)
+	{
+		tX = x2-x1;
+	}
+	else if (x1 > x2)
+	{
+		tX = x1-x2;
+	}
+	else if (x1 == x2)
+	{
+		tx = 0;
+	}
+	else
+	{
+		console.error("Error : in function getTall([4]) cannot compare " + x1 + " and " + x2 + " in main.js");
+		tX = -1;
+	}
+	tX++;
+	tY++;
+	return tX*tY;
+}
+
+function wallInZone(x1, y1, x2, y2, map) //cherche le nombre de mur dans cette zone
+{
+	var nbWall = 0;
+	var tall = getTall(x1, x2, y1, y2);
+	var tallX = getTall(x1, x2, 1, 1);
+	var tallY = getTall(1, 1, y1, y2);
+	if (tall == 0 || tall == 1)
+	{
+		console.warn("Warning : in function wallInZone([4]) tall(" + tall + ") is too small in main.js");
+		if (tall == 1)
+		{
+			if (testforWall(x1, y1, map))
+			{
+				return 1;
+			}
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	else
+	{
+		for (var i=0; i<tallX; i++)
+		{
+			for (var j=0; j < tallY; j++)
+			{
+				if (testforWall(i, j, map) || testforWall(i, j, map) == "player")
+				{
+					nbWall++;
+				}
+			}
+		}
+	}
+	return nbWall;
+}
 
 //Simplification pour taper le code dans la console
 
