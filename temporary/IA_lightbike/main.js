@@ -230,7 +230,7 @@ function getTall(x1, x2, y1, y2) // Renvoie la taille de la zone donnée
 	}
 	else if (x1 == x2)
 	{
-		tx = 0;
+		tX = 0;
 	}
 	else
 	{
