@@ -1,2 +1,7 @@
 Le rôle de l'intelligence artificielle dans les jeux vidéos de type FPS est multiple,
-et ce par le biais de nombreuses technologies différentes, telles que le pathfinding, 
+et ce par le biais de nombreuses technologies différentes, telles que le pathfinding,
+qui va être utilisé pour gérer les déplacements des bots(personnages non joueurs, gérés par l'ordinateur),
+la gestion des bots(qui s'occupe de la vitesse de visée, de la précision).
+Le pathfinding se différence en plusieurs types: Avec une grille ou sans grille
+La grille est un ensemble de points(appellés waypoints) placés par rapport à la map(carte de jeu),
+qui vont permettre au bot de se déplacer sur la map
