@@ -1,4 +1,3 @@
-var javascript_pixi.js_Version = "v2.2.0";
 /**
  * @license
  * pixi.js - v2.2.0
