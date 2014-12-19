@@ -1,5 +1,8 @@
+//Coded by JesFot
+var javascript_pixi_jescode_version = "1.0.0";
 var save = {"sprite":[],"textures":[],"id":{}};
-var degres = 15705;
+var degres_one = 15705;
+var rotationIndicator = 10000;
 
 function newID(table)
 {
