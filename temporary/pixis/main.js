@@ -2,6 +2,7 @@
 var javascript_pixi_jescode_version = "1.0.0";
 var save = {"sprite":[],"textures":[],"id":{}};
 var degres_one = 15705;
+var temporary = "tmp";
 var rotationIndicator = 10000;
 
 function newID(table)
