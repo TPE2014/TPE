@@ -2,7 +2,7 @@
 var javascript_Chifumi_Version = "2.7.4";
 var prev = []; //Ancien jets
 var wins = []; //Ancien win du joueur
-var canCh = true;
+var canCh = false;
 var index = 0;
 var winerEngaged = 0;
 var victoires = 0;
