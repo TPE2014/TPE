@@ -76,3 +76,43 @@ function verifNoReplaceO(idnum)
   placeO(idnum);
   return true;
 }
+
+function getOX(idnum)
+{
+  return boardID[idnum];
+}
+function getXO(c1, c2)
+{
+  return board[c1][c2];
+}
+
+function getStr(idnum)
+{
+  if(getOX(idnum) == 1)
+  {
+    return "X";
+  }
+  else if(getOX(idnum) == 2)
+  {
+    return "O";
+  }
+  else
+  {
+    return "%";
+  }
+}
+function getStr(c1, c2)
+{
+  if(getOX(c1, c2) == 1)
+  {
+    return "X";
+  }
+  else if(getOX(c1, c2) == 2)
+  {
+    return "O";
+  }
+  else
+  {
+    return "%";
+  }
+}
