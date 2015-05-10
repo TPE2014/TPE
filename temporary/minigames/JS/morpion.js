@@ -25,7 +25,7 @@ function getCoords(idnum)
     coord1 = idnum-6;
     coord2 = 3;
   }
-  return [coord1, coord2];
+  return [coord1-1, coord2-1];
 }
 
 function placeX(idnum)
@@ -83,7 +83,7 @@ function getOX(idnum)
 }
 function getXO(c1, c2)
 {
-  return board[c1][c2];
+  return board[c1-1][c2-1];
 }
 
 function getStr(idnum)
