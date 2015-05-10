@@ -103,11 +103,11 @@ function getStr(idnum)
 }
 function getStr(c1, c2)
 {
-  if(getOX(c1, c2) == 1)
+  if(getXO(c1, c2) == 1)
   {
     return "X";
   }
-  else if(getOX(c1, c2) == 2)
+  else if(getXO(c1, c2) == 2)
   {
     return "O";
   }
