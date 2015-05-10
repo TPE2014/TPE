@@ -31,7 +31,7 @@ function getCoords(idnum)
 function placeX(idnum)
 {
   boardID[idnum] = 1;
-  board[getCoords(idnum)[0][getCoords(idnum)[1]] = 1;
+  board[getCoords(idnum)[0]][getCoords(idnum)[1]] = 1;
 }
 function placeO(idnum)
 {
