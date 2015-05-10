@@ -3,9 +3,8 @@ var morpion_javascript_version = "1.0";
 var board = [[], [], []];
 var boardID = [];
 
-function placeX(idnum)
+function getCoords(idnum)
 {
-  boardID[idnum] = 1;
   var coord1 = 0;
   var coord2 = 0;
   if(idnum-6 < 0)
@@ -26,32 +25,18 @@ function placeX(idnum)
     coord1 = idnum-6;
     coord2 = 3;
   }
-  board[coord1][coord2] = 1;
+  return [coord1, coord2];
+}
+
+function placeX(idnum)
+{
+  boardID[idnum] = 1;
+  board[getCoords(idnum)[0][getCoords(idnum)[1]] = 1;
 }
 function placeO(idnum)
 {
   boardID[idnum] = 2;
-  var coord1 = 0;
-  var coord2 = 0;
-  if(idnum-6 < 0)
-  {
-    if(idnum-3 < 0)
-    {
-      coord1 = idnum-0;
-      coord2 = 1;
-    }
-    else
-    {
-      coord1 = idnum-3;
-      coord2 = 2;
-    }
-  }
-  else
-  {
-    coord1 = idnum-6;
-    coord2 = 3;
-  }
-  board[coord1][coord2] = 2;
+  board[getCoords(idnum)[0][getCoords(idnum)[1]] = 2;
 }
 
 function isX(idnum)
