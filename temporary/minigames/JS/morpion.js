@@ -36,7 +36,7 @@ function placeX(idnum)
 function placeO(idnum)
 {
   boardID[idnum] = 2;
-  board[getCoords(idnum)[0][getCoords(idnum)[1]] = 2;
+  board[getCoords(idnum)[0]][getCoords(idnum)[1]] = 2;
 }
 
 function isX(idnum)
