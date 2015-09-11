@@ -1,15 +1,20 @@
 //Created by JësFot
 var morpion_javascript_version = "1.0";
 var board = [[], [], []];
+/*
+  1 2 3 // 11 12 13
+  4 5 6 // 21 22 23
+  7 8 9 // 31 32 33
+*/
 var boardID = [];
 
 function getCoords(idnum)
 {
   var coord1 = 0;
   var coord2 = 0;
-  if(idnum-6 < 0)
+  if(idnum-6 <= 0)
   {
-    if(idnum-3 < 0)
+    if(idnum-3 <= 0)
     {
       coord1 = idnum-0;
       coord2 = 1;
