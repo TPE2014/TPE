@@ -32,6 +32,43 @@ function getCoords(idnum)
   }
   return [coord1-1, coord2-1];
 }
+function getID(c1, c2)
+{
+  if(c1 == 1)
+  {
+    if(c2 == 1)
+    {
+      return 1;
+    }
+    else if(c2 == 2)
+    {
+      return 4;
+    }
+    else
+    {
+      return 7;
+    }
+  }
+  else if(c1 == 2)
+  {
+    if(c2 == 1)
+    {
+      return 2;
+    }
+    else if(c2 == 2)
+    {
+      return 5;
+    }
+    else
+    {
+      return 8;
+    }
+  }
+  else
+  {
+    return c2*3;
+  }
+}
 
 function placeX(idnum)
 {
@@ -120,4 +157,55 @@ function getStr(c1, c2)
   {
     return "%";
   }
+}
+function isFull()
+{
+  for(var i=0; i<boardID.length; i++)
+  {
+    else if(!(isX(i) || isO(i)))
+    {
+      return false;
+    }
+  }
+  return true;
+}
+function hasWinner()
+{
+  for(var i=0; i<board.length; i++)
+  {
+    if(isO(getID(i, 1)) || isX(getID(i, 1)))
+    {
+      if(getXO(i, 2) == getXO(i, 1) && getXO(i, 2) == getXO(i, 3))
+      {
+        return getXO(i, 1);
+      }
+      else if(getXO(i+1, 2) == getXO(i, 1) && getXO(i, 1) == getXO(i+2, 3))
+      {
+        return getXO(i, 1);
+      }
+      else if(getXO(i+1, 1) == getXO(i, 1) && getXO(i, 1) == getXO(i+2, 1))
+      {
+        return getXO(i, 1);
+      }
+      else if(getXO(i, 1) == getXO(i-1, 2) && getXO(i, 1) == getXO(i-2, 3))
+      {
+        return getXO(i, 1);
+      }
+    }
+    if(isO(getID(i, 2)) || isX(getID(i, 2)))
+    {
+      if(getXO(i+1, 2) == getXO(i, 2) && getXO(i, 2) == getXO(i+2, 2))
+      {
+        return getXO(i, 1);
+      }
+    }
+    if(isO(getID(i, 3)) || isX(getID(i, 3)))
+    {
+      if(getXO(i+1, 3) == getXO(i, 3) && getXO(i, 3) == getXO(i+2, 3))
+      {
+        return getXO(i, 1);
+      }
+    }
+  }
+  return false || -1;
 }
