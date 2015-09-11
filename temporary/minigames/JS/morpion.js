@@ -162,7 +162,7 @@ function isFull()
 {
   for(var i=0; i<boardID.length; i++)
   {
-    else if(!(isX(i) || isO(i)))
+    if(!(isX(i) || isO(i)))
     {
       return false;
     }
