@@ -127,7 +127,18 @@ function getXO(c1, c2)
 {
   return board[c1-1][c2-1];
 }
-
+function toString(type)
+{
+  if(type == 1)
+  {
+    return "X";
+  }
+  else if(type == 2)
+  {
+    return "O";
+  }
+  return "%";
+}
 function getStr(idnum)
 {
   if(getOX(idnum) == 1)
