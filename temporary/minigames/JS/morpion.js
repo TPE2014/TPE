@@ -171,7 +171,7 @@ function isFull()
 }
 function hasWinner()
 {
-  for(var i=0; i<board.length; i++)
+  for(var i=1; i<board.length+1; i++)
   {
     if(isO(getID(i, 1)) || isX(getID(i, 1)))
     {
