@@ -117,7 +117,7 @@ function detectButton(tmp)
 	}
 		
 }
-function detectBBoucle(tmp = tmpGamepad)
+/*function detectBBoucle(tmp = tmpGamepad)
 {
 	if(tmp)
 	{
@@ -129,7 +129,7 @@ function detectBBoucle(tmp = tmpGamepad)
 	{
 		console.warn("No gamepads detected. ;(")
 	}
-}
+}*/
 
 function init()
 {
