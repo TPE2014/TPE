@@ -11,7 +11,6 @@ var bourinEngaged = 0;
 var bourinEngaged2 = 0;
 var sexe;
 //function play(choix);
-}
 // Coups:
 // 1: Pierre
 // 2: Feuille
