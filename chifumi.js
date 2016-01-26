@@ -398,6 +398,6 @@ function readTextFile(file)
     	{
     		this.result = tmp.result;
     	}
-    	return this.result;
+    	return this.result.split("\n");
     }
 }
