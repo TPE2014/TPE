@@ -396,7 +396,6 @@ function readTextFile(file)
     {
     	if(this.result == "")
     	{
-    		rawFile.send(null);
     		this.result = tmp.result;
     	}
     	return this.result;
