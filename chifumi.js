@@ -374,13 +374,32 @@ function subLoop(choix, nb)
 	}
 }
 
-function readTxtFile(path)
+function readTextFile(file)
 {
-	var reader = new FileReader();
-	reader.onload = function()
-	{
-		var text = reader.result;
-		console.log(text);
-	};
-	reader.readAsText(path);
+    this.result = "";
+    var tmp = {};
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                tmp.result = allText;
+            }
+        }
+    }
+    rawFile.send(null);
+    this.result = tmp.result;
+    this.getResult = function()
+    {
+    	if(this.result = "")
+    	{
+    		rawFile.send(null);
+    		this.result = tmp.result;
+    	}
+    	return this.result;
+    }
 }
