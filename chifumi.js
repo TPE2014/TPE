@@ -373,3 +373,14 @@ function subLoop(choix, nb)
 		play(choix);
 	}
 }
+
+function readTxtFile(path)
+{
+	var reader = new FileReader();
+	reader.onload = function()
+	{
+		var text = reader.result;
+		console.log(text);
+	};
+	reader.readAsText(path);
+}
