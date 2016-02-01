@@ -76,7 +76,7 @@ function Object_Singular()
 	}
 }
 
-function Object_WordDescriptio()
+function Object_WordDescription()
 {
 	this.gender = new Object_Gender();
 	this.singular = new Object_Singular();
