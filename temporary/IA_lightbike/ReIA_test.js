@@ -77,7 +77,7 @@ function calcZone(startX, startY, startDir, map)
 					stop = true;
 					x = startX;
 					total += subtotal;
-					x++;
+					break;
 				}
 				x--;
 				if(testforWall(x, i, map) == false)
@@ -99,7 +99,7 @@ function calcZone(startX, startY, startDir, map)
 					stop = true;
 					x = startX;
 					total += subtotal;
-					x++;
+					break;
 				}
 				x++;
 				if(testforWall(x, i, map) == false)
@@ -138,7 +138,7 @@ function calcZone(startX, startY, startDir, map)
 					stop = true;
 					x = startX;
 					total += subtotal;
-					x++;
+					break;
 				}
 				x--;
 				if(testforWall(x, i, map) == false)
@@ -160,7 +160,7 @@ function calcZone(startX, startY, startDir, map)
 					stop = true;
 					x = startX;
 					total += subtotal;
-					x++;
+					break;
 				}
 				x++;
 				if(testforWall(x, i, map) == false)
@@ -199,7 +199,7 @@ function calcZone(startX, startY, startDir, map)
 					stop = true;
 					y = startY;
 					total += subtotal;
-					y++;
+					break;
 				}
 				y--;
 				if(testforWall(i, y, map) == false)
@@ -221,7 +221,7 @@ function calcZone(startX, startY, startDir, map)
 					stop = true;
 					y = startY;
 					total += subtotal;
-					y++;
+					break;
 				}
 				y++;
 				if(testforWall(i, y, map) == false)
@@ -260,7 +260,7 @@ function calcZone(startX, startY, startDir, map)
 					stop = true;
 					y = startY;
 					total += subtotal;
-					y++;
+					break;
 				}
 				y--;
 				if(testforWall(i, y, map) == false)
@@ -282,7 +282,7 @@ function calcZone(startX, startY, startDir, map)
 					stop = true;
 					y = startY;
 					total += subtotal;
-					y++;
+					break;
 				}
 				y++;
 				if(testforWall(i, y, map) == false)
