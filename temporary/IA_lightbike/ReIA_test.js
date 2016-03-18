@@ -110,6 +110,7 @@ function calcZone(startX, startY, startDir, map)
 				}
 			}
 		}
+		return total;
 	}
 	if(startDir == 1)
 	{
@@ -166,6 +167,7 @@ function calcZone(startX, startY, startDir, map)
 				}
 			}
 		}
+		return total;
 	}
 	if(startDir == 3)
 	{
@@ -222,6 +224,7 @@ function calcZone(startX, startY, startDir, map)
 				}
 			}
 		}
+		return total;
 	}
 	if(startDir == 2)
 	{
@@ -278,5 +281,6 @@ function calcZone(startX, startY, startDir, map)
 				}
 			}
 		}
+		return total;
 	}
 }
