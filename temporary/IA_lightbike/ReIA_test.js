@@ -27,19 +27,19 @@ var IA = function(_name, _id)
 	
 	this.getDirection = function()
 	{
-		if(this.pos[0] == this.lastPos[0] + 1)
+		if(this.pos[0] == this.lastPos[0] - 1)
 		{
 			return 0;
 		}
-		if(this.pos[0] == this.lastPos[0] - 1)
+		if(this.pos[0] == this.lastPos[0] + 1)
 		{
 			return 1;
 		}
-		if(this.pos[1] == this.lastPos[1] + 1)
+		if(this.pos[1] == this.lastPos[1] - 1)
 		{
 			return 2;
 		}
-		if(this.pos[1] == this.lastPos[1] - 1)
+		if(this.pos[1] == this.lastPos[1] + 1)
 		{
 			return 3;
 		}
@@ -58,7 +58,7 @@ function calcZone(startX, startY, startDir, map)
 	if(startDir == 0)
 	{
 		var x = startX;
-		var y = startY + 1;
+		var y = startY - 1;
 		var total = 1;
 		var subtotal = 0;
 		
@@ -67,7 +67,7 @@ function calcZone(startX, startY, startDir, map)
 			return 0;
 		}
 		
-		for(var i = y; i < map[0].length; i++)
+		for(var i = y; i > 0; i--)
 		{
 			var stop = false;
 			while(!stop)
@@ -104,7 +104,7 @@ function calcZone(startX, startY, startDir, map)
 	if(startDir == 1)
 	{
 		var x = startX;
-		var y = startY - 1;
+		var y = startY + 1;
 		var total = 1;
 		var subtotal = 0;
 		
@@ -113,7 +113,7 @@ function calcZone(startX, startY, startDir, map)
 			return 0;
 		}
 		
-		for(var i = y; i > 0; i--)
+		for(var i = y; i < map[0].length; i++)
 		{
 			var stop = false;
 			while(!stop)
