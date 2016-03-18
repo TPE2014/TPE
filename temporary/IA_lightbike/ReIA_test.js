@@ -72,6 +72,11 @@ function calcZone(startX, startY, startDir, map)
 			var stop = false;
 			while(!stop)
 			{
+				if(x == 0 || x == map.length)
+				{
+					stop = true;
+					x++;
+				}
 				x--;
 				if(testforWall(x, i, map) == false)
 				{
@@ -87,6 +92,11 @@ function calcZone(startX, startY, startDir, map)
 			stop = false;
 			while(!stop)
 			{
+				if(x == 0 || x == map.length)
+				{
+					stop = true;
+					x++;
+				}
 				x++;
 				if(testforWall(x, i, map) == false)
 				{
@@ -118,6 +128,11 @@ function calcZone(startX, startY, startDir, map)
 			var stop = false;
 			while(!stop)
 			{
+				if(x == 0 || x == map.length)
+				{
+					stop = true;
+					x++;
+				}
 				x--;
 				if(testforWall(x, i, map) == false)
 				{
@@ -133,6 +148,11 @@ function calcZone(startX, startY, startDir, map)
 			stop = false;
 			while(!stop)
 			{
+				if(x == 0 || x == map.length)
+				{
+					stop = true;
+					x++;
+				}
 				x++;
 				if(testforWall(x, i, map) == false)
 				{
@@ -159,11 +179,16 @@ function calcZone(startX, startY, startDir, map)
 			return 0;
 		}
 		
-		for(var i = x; i < map[0].length; i++)
+		for(var i = x; i < map.length; i++)
 		{
 			var stop = false;
 			while(!stop)
 			{
+				if(y == 0 || y == map.length)
+				{
+					stop = true;
+					y++;
+				}
 				y--;
 				if(testforWall(i, y, map) == false)
 				{
@@ -179,6 +204,11 @@ function calcZone(startX, startY, startDir, map)
 			stop = false;
 			while(!stop)
 			{
+				if(y == 0 || y == map.length)
+				{
+					stop = true;
+					y++;
+				}
 				y++;
 				if(testforWall(i, y, map) == false)
 				{
@@ -210,6 +240,11 @@ function calcZone(startX, startY, startDir, map)
 			var stop = false;
 			while(!stop)
 			{
+				if(y == 0 || y == map.length)
+				{
+					stop = true;
+					y++;
+				}
 				y--;
 				if(testforWall(i, y, map) == false)
 				{
@@ -225,6 +260,11 @@ function calcZone(startX, startY, startDir, map)
 			stop = false;
 			while(!stop)
 			{
+				if(y == 0 || y == map.length)
+				{
+					stop = true;
+					y++;
+				}
 				y++;
 				if(testforWall(i, y, map) == false)
 				{
