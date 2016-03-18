@@ -3,7 +3,7 @@ var fileName = "ReIA_test.js";
 
 var direction = [{
 	"name":"left",
-	"id"0
+	"id":0
 },{
 	"name":"right",
 	"id":1
