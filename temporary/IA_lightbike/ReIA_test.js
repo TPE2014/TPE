@@ -75,6 +75,8 @@ function calcZone(startX, startY, startDir, map)
 				if(x == 0 || x == map.length)
 				{
 					stop = true;
+					x = startX;
+					total += subtotal;
 					x++;
 				}
 				x--;
@@ -95,6 +97,8 @@ function calcZone(startX, startY, startDir, map)
 				if(x == 0 || x == map.length)
 				{
 					stop = true;
+					x = startX;
+					total += subtotal;
 					x++;
 				}
 				x++;
@@ -132,6 +136,8 @@ function calcZone(startX, startY, startDir, map)
 				if(x == 0 || x == map.length)
 				{
 					stop = true;
+					x = startX;
+					total += subtotal;
 					x++;
 				}
 				x--;
@@ -152,6 +158,8 @@ function calcZone(startX, startY, startDir, map)
 				if(x == 0 || x == map.length)
 				{
 					stop = true;
+					x = startX;
+					total += subtotal;
 					x++;
 				}
 				x++;
@@ -189,6 +197,8 @@ function calcZone(startX, startY, startDir, map)
 				if(y == 0 || y == map.length)
 				{
 					stop = true;
+					y = startY;
+					total += subtotal;
 					y++;
 				}
 				y--;
@@ -209,6 +219,8 @@ function calcZone(startX, startY, startDir, map)
 				if(y == 0 || y == map.length)
 				{
 					stop = true;
+					y = startY;
+					total += subtotal;
 					y++;
 				}
 				y++;
@@ -246,6 +258,8 @@ function calcZone(startX, startY, startDir, map)
 				if(y == 0 || y == map.length)
 				{
 					stop = true;
+					y = startY;
+					total += subtotal;
 					y++;
 				}
 				y--;
@@ -266,6 +280,8 @@ function calcZone(startX, startY, startDir, map)
 				if(y == 0 || y == map.length)
 				{
 					stop = true;
+					y = startY;
+					total += subtotal;
 					y++;
 				}
 				y++;
