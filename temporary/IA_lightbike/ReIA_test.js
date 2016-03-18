@@ -72,7 +72,7 @@ function calcZone(startX, startY, startDir, map)
 			var stop = false;
 			while(!stop)
 			{
-				if(x == 0 || x == map.length)
+				if(x == 0 || x == map.length-1)
 				{
 					stop = true;
 					x = startX;
@@ -94,7 +94,7 @@ function calcZone(startX, startY, startDir, map)
 			stop = false;
 			while(!stop)
 			{
-				if(x == 0 || x == map.length)
+				if(x == 0 || x == map.length-1)
 				{
 					stop = true;
 					x = startX;
@@ -133,7 +133,7 @@ function calcZone(startX, startY, startDir, map)
 			var stop = false;
 			while(!stop)
 			{
-				if(x == 0 || x == map.length)
+				if(x == 0 || x == map.length-1)
 				{
 					stop = true;
 					x = startX;
@@ -155,7 +155,7 @@ function calcZone(startX, startY, startDir, map)
 			stop = false;
 			while(!stop)
 			{
-				if(x == 0 || x == map.length)
+				if(x == 0 || x == map.length-1)
 				{
 					stop = true;
 					x = startX;
@@ -194,7 +194,7 @@ function calcZone(startX, startY, startDir, map)
 			var stop = false;
 			while(!stop)
 			{
-				if(y == 0 || y == map.length)
+				if(y == 0 || y == map[0].length-1)
 				{
 					stop = true;
 					y = startY;
@@ -216,7 +216,7 @@ function calcZone(startX, startY, startDir, map)
 			stop = false;
 			while(!stop)
 			{
-				if(y == 0 || y == map.length)
+				if(y == 0 || y == map[0].length-1)
 				{
 					stop = true;
 					y = startY;
@@ -255,7 +255,7 @@ function calcZone(startX, startY, startDir, map)
 			var stop = false;
 			while(!stop)
 			{
-				if(y == 0 || y == map.length)
+				if(y == 0 || y == map[0].length-1)
 				{
 					stop = true;
 					y = startY;
@@ -277,7 +277,7 @@ function calcZone(startX, startY, startDir, map)
 			stop = false;
 			while(!stop)
 			{
-				if(y == 0 || y == map.length)
+				if(y == 0 || y == map[0].length-1)
 				{
 					stop = true;
 					y = startY;
