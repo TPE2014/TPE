@@ -229,7 +229,7 @@ function iaShot()
 {
 	play(chooseShot());
 }
-function chooseShot()//Here comes the AI
+function chooseShot(choose)//Here comes the AI
 {
 	var baseTest = isDefined(lastVar(prev)) && isDefined(lastVar(prev)) && isDefined(lastVar(prev));
 	var testAllerRetour1 = ((lastVar(prev) != lastVar2(prev)) && (lastVar2(prev) != lastVar3(prev))) && (lastVar3(prev) != lastVar(prev));
